@@ -1,0 +1,30 @@
+% Accepted journal papers and submitted pre-prints
+
+@thesis{TensorFlowOpt,
+	Author = {Gabriel Bengtsson and Jesper Larsson, Johan Sörell and Elias Ågeby},
+	School = {KTH Royal Institute of Technology},
+	Title = {Large scale optimization on a GPU},
+	Year = {2018},
+	Type = {Bachelor's Thesis},
+	Url = {},
+	Abstract = {The theory and practice of convex optimization has had a profound impact on many scientific fields, and provides a way to formalize and solve real world problems. However, classical software for solving convex optimization problems scales poorly to the massive optimization problems that characterize modern big data problems. At the same time, the exploding interest in machine learning, and in particular deep learning, has led to programming frameworks that can effectively use specialized computer hardware such as graphical processing units (GPUs) for high performance computing. An example of such a framework is Google’s TensorFlow. However, the basic building blocks of TensorFlow are very similar to those used in a class of optimization methods known collectively as matrix-free or proximal optimization methods, and it should be possible to use the power of these computational platforms for deep learning also for convex optimization. Within the Department of Information Science and Engineering at KTH, we recently developed an optimization algorithm for a problem related to the analysis of image-based biomedical assays used in immunology. The proposed project will explore the idea of implementing this optimization algorithm in TensorFlow, thereby allowing it to be easily executed on powerful GPUs. For this project, you do not need prior knowledge of convex optimization, machine learning or TensorFlow. However, you do need to be able to program in Python. The project work, i.e., the implementation and testing of the algorithm, can be carried out on a standard PC. For final testing, we will be able to provide access to a computer with high performance GPU, and we will provide both simulated and real biomedical data to run the algorithm on.},
+}
+
+@thesis{SleepScoringML,
+	Author = {Lovisa Colérus and Karla Rehn, David Ekvall and Rebecka Winqvist, Josef Malmström and Najib Yavari},
+	School = {KTH Royal Institute of Technology},
+	Title = {Machine learning for sleep scoring},
+	Year = {2018},
+	Type = {Bachelor's Thesis},
+	Url = {},
+	Abstract = {Sleep scoring is a process in which biological and pharmacological researchers analyze the sleep of a subject (animal or human). To do this, they capture signals while the subject sleeps and they "score" or classify time periods of these signals in several categories. These categories attempt to identify different stages or states within the sleep process. Sleep scoring is widely used by scientists to understand the fundamental networking of the brain, as well as to ensure certain properties of numerous pharmacological compounds. The technique is easy to implement and inexpensive. However, the analysis of the data is time consuming and requires a lot of manual work by experienced researchers. The proposed project is to automate the process of sleep scoring, by training a classifier that classifies a section of electroencephalography (EEG) data to the corresponding category of sleep that it represents. A first version of the solution could use built-in machine learning functionality in Matlab to train the classifier. A second, more advanced, solution is to use state-of-the-art machine learning in the form of deep learning implemented in Python using TensorFlow. It will be up to the students which solution or solutions to ultimately select. Basic knowledge of Matlab is helpful for implementing the first solution. Good knowledge of Python will be required for the second solution.},
+}
+
+@mastersthesis{Jones2018,
+	Author = {Damien Jones},
+	School = {KTH Royal Institute of Technology},
+	Title = {Automated Rodent Sleep Analysis with Modern Machine Learning Methods},
+	Year = {2018},
+	Url = {},
+	Abstract = {Sleep staging is the use of electrophysiological signals to determine the quality and architecture of sleep in an animal. Currently, to achieve this, researchers manually classify contiguous sections of electroencephalographic and electromyographic signals into defined sleep modes or stages. This is a slow and laborious process. Many attempts at semi-automated solutions can be found in the literature. In these attempts, a researcher manually classifies a portion of the data from a specific rodent. This data is used to train a model which can then be used to classify the rest of the data from that rodent. While such solutions can be found in commercial products, they still require hours of manual classification to be done by the researcher. In this thesis, I explore two machine learning methods in an attempt to fully automate the process of sleep staging. The automation consists of building a classifier that can classify data from a new rodent, using only manually classified data from previous rodents. This classifier should classify this new rodent’s data at a sufficiently high accuracy. While there have also been attempts at such a system in the past, none of them have reached a level of accuracy that is acceptable for use. The two methods implemented in this thesis are support vector machines (SVM) and convolution neural networks (CNN). The results obtained are promising, with the results from SVM being on the cusp of real world usability for automated sleep staging.},
+}

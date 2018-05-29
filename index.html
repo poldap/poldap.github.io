@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Homepage of Pol del Aguila Pla at the KTH Royal Institute of Technology">
+  <meta name="keywords" content="Pol del Aguila Pla, Pol, KTH, diffusion, inverse diffusion, deconvolution, source localization, cell detection">
+  <meta name="author" content="Pol del Aguila Pla">
+  <base href="/">
+
+  <link rel="shortcut icon" href="/~poldap/data/pol.ico">
+
+  <title>Pol del Aguila Pla</title>
+
+  <!-- Remote: angular and bootstrap -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular-route.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular-resource.min.js"></script>
+  <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.min.js"></script> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- Remote: Google material icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Local js -->
+    <!-- Bibtex parser -->
+    <script src="/~poldap/js/Parser.js"></script>
+    <!-- Others -->
+    <script src="/~poldap/js/main.js"></script>
+    <script src="/~poldap/js/pubs.js"></script>
+    <script src="/~poldap/js/teaching.js"></script>
+    <script src="/~poldap/js/bibmodal.js"></script>
+    <script src="/~poldap/js/picmodal.js"></script>
+    <script src="/~poldap/js/strava.js"></script>
+
+  <!-- Local css -->
+  <link rel="stylesheet" type="text/css" href="/~poldap/css/style.css">
+
+</head>
+
+<body ng-app="acadApp" ng-controller="mainCtrl">
+
+  <nav class="navbar navbar-default navbar-top" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" ng-click="navbarCollapsed = !navbarCollapsed">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/~poldap/">
+              <i class="color-theme material-icons">account_balance</i>
+        </a>
+      </div>
+
+      <div class="collapse navbar-collapse" uib-collapse="navbarCollapsed" >
+        <ul class="nav navbar-nav">
+          <li ng-class="{'active': button == '/bio'}">
+            <a href="/~poldap/#/bio">
+              <i class="material-icons">face</i> Bio
+            </a>
+          </li>
+          <li ng-class="{'active': button == '/pubs'}">
+            <a href="/~poldap/#/pubs">
+              <i class="material-icons">insert_drive_file</i> Publications
+            </a>
+          </li>
+          <li ng-class="{'active': button == '/talks'}">
+            <a href="/~poldap/#/talks">
+              <i class="material-icons">record_voice_over</i> Talks
+            </a>
+          </li>
+          <li ng-class="{'active': button == '/teaching'}">
+            <a href="/~poldap/#/teaching">
+              <i class="material-icons">book</i> Teaching
+            </a>
+          </li>
+          <li ng-class="{'active': button == '/more'}">
+            <a href="/~poldap/#/more">
+              <i class="material-icons">add</i> More
+            </a>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+  <div class="container-fluid" ng-view> </div>
+
+</body>
+</html>

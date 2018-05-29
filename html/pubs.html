@@ -1,0 +1,104 @@
+<h3>List of publications</h3>
+
+<!-- search bar -->
+<div class="row">
+	<div class="col-sm-4">
+		<input ng-model="filter_text" type="text" class="form-control" placeholder="Search...">
+	</div>
+</div>
+
+<!-- error handling BibTex file (empty or bad syntax) -->
+<p ng-show="error" class="bg-danger">No publications found</p>
+
+<!-- loop through publication types -->
+<div ng-repeat="pub_info in sorted_pubs">
+        
+        <!-- header for publication type (hide if none in this type, see header names in pubs.js) -->
+	<h4 ng-hide = "!filteredpubs.length">{{pub_info.name}}</h4>
+
+	<!-- initiate list of publications of that type (item in master list) -->
+	<ul class="list-group">
+	
+                <!-- loop through pubications of that type (each one of this item <li>) -->
+		<li class="list-group-item publist_row" ng-repeat="pub in filteredpubs = (pub_info.pubs | orderBy: getDate : true | filter:filter_text)">
+		
+			<!-- switch through publication types (set handler for click events and configure type of item) -->
+			<span class="list-group-item-text" ng-switch on="pub.EntryType" ng-click="showMore = !showMore" >
+                            
+                            <!-- format for case: unpublished (calling it preprints) -->
+			    <span ng-switch-when="unpublished">
+			   		<i class="material-icons">insert_drive_file</i>
+					{{pub.Fields.Author_noand}}, <strong>{{pub.Fields.Title}}</strong>, 
+					<span ng-show="pub.Fields.Journal"><em>{{pub.Fields.Journal}}</em>, </span>
+					<span ng-show="pub.Fields.Volume">vol. {{pub.Fields.Volume}}, </span>
+					<span ng-show="pub.Fields.Number">no. {{pub.Fields.Number}}, </span>
+					<span ng-show="pub.Fields.Pages">pp. {{pub.Fields.Pages}}, </span>
+					{{pub.Fields.Year}} 
+                            </span>
+                            <!-- format for case: article -->
+			    <span ng-switch-when="article">
+			   		<i class="material-icons">insert_drive_file</i>
+					{{pub.Fields.Author_noand}}, <strong>{{pub.Fields.Title}}</strong>, 
+					<em>{{pub.Fields.Journal}}</em>, 
+					<span ng-show="pub.Fields.Volume">vol. {{pub.Fields.Volume}}, </span>
+					<span ng-show="pub.Fields.Number">no. {{pub.Fields.Number}}, </span>
+					<span ng-show="pub.Fields.Pages">pp. {{pub.Fields.Pages}}, </span>
+					{{pub.Fields.Year}} 
+                            </span>
+                            <!-- format for case: inproceedings -->
+			    <span ng-switch-when="inproceedings">
+			   		<i class="material-icons">insert_drive_file</i>
+					{{pub.Fields.Author_noand}}, <strong>{{pub.Fields.Title}}</strong>, in <em>{{pub.Fields.Booktitle}}</em>,
+                                        <span ng-show="pub.Fields.Pages">pp. {{pub.Fields.Pages}},</span> {{pub.Fields.Year}}
+			    </span>
+			    <!-- format for case: book -->
+ 			    <span ng-switch-when="book">
+   			   		<i class="material-icons">book</i>
+					{{pub.Fields.Author_noand}}, <strong>{{pub.Fields.Title}}</strong>, {{pub.Fields.Publisher}}, {{pub.Fields.Year}}
+			    </span>
+			    <!-- format for case: inbook (chapters) -->
+ 			    <span ng-switch-when="inbook">
+   			   		<i class="material-icons">book</i>
+					{{pub.Fields.Author_noand}}, <strong>{{pub.Fields.Chapter}}</strong>, in {{pub.Fields.Title}}, pp. {{pub.Fields.Pages}}, {{pub.Fields.Publisher}}, {{pub.Fields.Year}}
+			    </span>	
+			    <!-- format for case: mastersthesis -->
+			    <span ng-switch-when="mastersthesis">
+			   		<i class="material-icons">book</i>
+					{{pub.Fields.Author_noand}}, <strong>{{pub.Fields.Title}}</strong>, <span ng-if="pub.Fields.Type">{{pub.Fields.Type}}</span><span ng-if="!pub.Fields.Type">Master's thesis</span> at <em>{{pub.Fields.School}}</em>, {{pub.Fields.Year}}
+			    </span>
+			    <!-- format for case: phdthesis -->			    
+			    <span ng-switch-when="phdthesis">
+			   		<i class="material-icons">book</i>
+					{{pub.Fields.Author_noand}}, <strong>{{pub.Fields.Title}}</strong>, Ph.D. thesis at <em>{{pub.Fields.School}}</em>, {{pub.Fields.Year}}
+			    </span>
+			    <!-- format for case: patent -->			    
+			    <span ng-switch-when="patent">
+			   		<i class="material-icons">assignment_turned_in</i>
+					{{pub.Fields.Author_noand}}, <strong>{{pub.Fields.Title}}</strong>, {{pub.Fields.Nationality}} <span ng-if="pub.Fields.Type">{{pub.Fields.Type}}</span><span ng-if="!pub.Fields.Type">Patent</span><span ng-show="pub.Fields.Number"> {{pub.Fields.Number}}</span>, {{pub.Fields.Year}}
+			    </span>
+			    <!-- arrow to expand, common to all cases (controlled by showMore variable for each pub) -->
+                            <i id="morearrow" class="material-icons color-theme"> {{showMore ? 'arrow_downward' : 'arrow_forward'}} </i> </a>
+			</span>	
+                        
+                        <!-- Extra info all pubs may have, show only if available. Abstract, DOI link, arXiv link, URL, slides link, and BibTex reference (always) -->
+			<div ng-show="showMore" id="pubhidden">
+				<span ng-show="pub.Fields.Abstract"> 
+                                    <p style="text-align:justify"><strong>Abstract: </strong>
+                                    {{pub.Fields.Abstract}} </p>
+                                </span>
+				<div id="pubButtons">
+					<a class="label label-theme" ng-show="pub.Fields.Doi" href="https://doi.org/{{pub.Fields.Doi}}">DOI: {{pub.Fields.Doi}}</a> 
+					<a class="label label-theme" ng-show="pub.Fields.Eprint" href="http://arxiv.org/abs/{{pub.Fields.Eprint}}">arXiv: {{pub.Fields.Eprint}} [{{pub.Fields.Eprintclass}}]</a> 
+					<a class="label label-theme" ng-show="pub.Fields.Url" href="{{pub.Fields.Url}}">Link</a> 
+					<a class="label label-theme" ng-show="pub.Fields.Slides" href="{{pub.Fields.Slides}}">Slides</a>
+					<a class="label label-theme" ng-click="open(pub)">BibTeX</a>
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>
+<p>
+<small>
+<a href="/~poldap/data/pubs/bibfile.bib">Download the .bib file with my publications.</a>
+</small>
+</p>

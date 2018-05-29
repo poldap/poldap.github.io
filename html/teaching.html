@@ -1,0 +1,122 @@
+<h3> Teaching activities </h3>
+
+    <p style="text-align:justify">
+        As part of my Ph.D. training, I participate in diverse teaching activities. In fact, I am passionate about teaching and learning, and I am extremely interested by the possible contributions of new technologies in university-level pedagogical techniques, e.g. flipped classroom, clicker sessions, etc.
+    </p>
+    
+    <h4> Teaching assistance, EQ2300 Digital Signal Processing </h4>
+    <p style="text-align:justify">
+        Up until now, the main bulk of my work in teaching activities has been the teaching assistance of the subject <i>EQ2300 Digital Signal Processing</i> in the Fall semesters of 2014, 2015, 2016 and 2017. As part of this task, I have guided students through approximately 80 hours of exercise sessions and 20 hours of laboratory sessions, and I have even lectured for 4 hours during the fall semester of 2017 (accumulating an approximate number of 140 hours of class preparation). Furthermore, I have taken an active role in the development of new course material, and spent up to 45 h developing a new exercise collection, and thus, a new set of exercise sessions, that brought together the content in the lectures and the exercise assignments. Finally, I have dedicated roughly 20 hours to private tutoring and 100 hours to the grading of projects and exams.
+    </p>
+    
+    <h4> Supervision of student theses </h4>
+    <p style="text-align:justify">
+        Additionally, I supervise M.Sc. and B.Sc. theses in practical machine learning and optimization topics. 
+    </p>
+    
+    <!-- search bar -->
+<div class="row">
+	<div class="col-sm-4">
+		<input ng-model="filter_text" type="text" class="form-control" placeholder="Search...">
+	</div>
+</div>
+
+<!-- error handling BibTex file (empty or bad syntax) -->
+<p ng-show="error" class="bg-danger">No publications found</p>
+
+<!-- loop through publication types -->
+<div ng-repeat="pub_info in sorted_pubs">
+        
+        <!-- header for publication type (hide if none in this type, see header names in pubs.js) -->
+	<h4 ng-hide = "!filteredpubs.length">{{pub_info.name}}</h4>
+
+	<!-- initiate list of publications of that type (item in master list) -->
+	<ul class="list-group">
+	
+                <!-- loop through pubications of that type (each one of this item <li>) -->
+		<li class="list-group-item publist_row" ng-repeat="pub in filteredpubs = (pub_info.pubs | orderBy: getDate : true | filter:filter_text)">
+		
+			<!-- switch through publication types (set handler for click events and configure type of item) -->
+			<span class="list-group-item-text" ng-switch on="pub.EntryType" ng-click="showMore = !showMore" >
+                            
+                            <!-- format for case: unpublished (calling it preprints) -->
+			    <span ng-switch-when="unpublished">
+			   		<i class="material-icons">insert_drive_file</i>
+					{{pub.Fields.Author_noand}}, <strong>{{pub.Fields.Title}}</strong>, 
+					<span ng-show="pub.Fields.Journal"><em>{{pub.Fields.Journal}}</em>, </span>
+					<span ng-show="pub.Fields.Volume">vol. {{pub.Fields.Volume}}, </span>
+					<span ng-show="pub.Fields.Number">no. {{pub.Fields.Number}}, </span>
+					<span ng-show="pub.Fields.Pages">pp. {{pub.Fields.Pages}}, </span>
+					{{pub.Fields.Year}} 
+                            </span>
+                            <!-- format for case: article -->
+			    <span ng-switch-when="article">
+			   		<i class="material-icons">insert_drive_file</i>
+					{{pub.Fields.Author_noand}}, <strong>{{pub.Fields.Title}}</strong>, 
+					<em>{{pub.Fields.Journal}}</em>, 
+					<span ng-show="pub.Fields.Volume">vol. {{pub.Fields.Volume}}, </span>
+					<span ng-show="pub.Fields.Number">no. {{pub.Fields.Number}}, </span>
+					<span ng-show="pub.Fields.Pages">pp. {{pub.Fields.Pages}}, </span>
+					{{pub.Fields.Year}} 
+                            </span>
+                            <!-- format for case: inproceedings -->
+			    <span ng-switch-when="inproceedings">
+			   		<i class="material-icons">insert_drive_file</i>
+					{{pub.Fields.Author_noand}}, <strong>{{pub.Fields.Title}}</strong>, in <em>{{pub.Fields.Booktitle}}</em>,
+                                        <span ng-show="pub.Fields.Pages">pp. {{pub.Fields.Pages}},</span> {{pub.Fields.Year}}
+			    </span>
+			    <!-- format for case: book -->
+ 			    <span ng-switch-when="book">
+   			   		<i class="material-icons">book</i>
+					{{pub.Fields.Author_noand}}, <strong>{{pub.Fields.Title}}</strong>, {{pub.Fields.Publisher}}, {{pub.Fields.Year}}
+			    </span>
+			    <!-- format for case: inbook (chapters) -->
+ 			    <span ng-switch-when="inbook">
+   			   		<i class="material-icons">book</i>
+					{{pub.Fields.Author_noand}}, <strong>{{pub.Fields.Chapter}}</strong>, in {{pub.Fields.Title}}, pp. {{pub.Fields.Pages}}, {{pub.Fields.Publisher}}, {{pub.Fields.Year}}
+			    </span>	
+			    <!-- format for case: mastersthesis -->
+			    <span ng-switch-when="mastersthesis">
+			   		<i class="material-icons">book</i>
+					{{pub.Fields.Author_noand}}, <strong>{{pub.Fields.Title}}</strong>, <span ng-if="pub.Fields.Type">{{pub.Fields.Type}}</span><span ng-if="!pub.Fields.Type">Master's thesis</span> at <em>{{pub.Fields.School}}</em>, {{pub.Fields.Year}}
+			    </span>
+			    <span ng-switch-when="thesis">
+			   		<i class="material-icons">book</i>
+					{{pub.Fields.Author}}, <strong>{{pub.Fields.Title}}</strong>, <span ng-if="pub.Fields.Type">{{pub.Fields.Type}}</span><span ng-if="!pub.Fields.Type">Thesis</span> at <em>{{pub.Fields.School}}</em>, {{pub.Fields.Year}}
+			    </span>
+			    <!-- format for case: phdthesis -->			    
+			    <span ng-switch-when="phdthesis">
+			   		<i class="material-icons">book</i>
+					{{pub.Fields.Author_noand}}, <strong>{{pub.Fields.Title}}</strong>, Ph.D. thesis at <em>{{pub.Fields.School}}</em>, {{pub.Fields.Year}}
+			    </span>
+			    <!-- format for case: patent -->			    
+			    <span ng-switch-when="patent">
+			   		<i class="material-icons">assignment_turned_in</i>
+					{{pub.Fields.Author_noand}}, <strong>{{pub.Fields.Title}}</strong>, {{pub.Fields.Nationality}} <span ng-if="pub.Fields.Type">{{pub.Fields.Type}}</span><span ng-if="!pub.Fields.Type">Patent</span><span ng-show="pub.Fields.Number"> {{pub.Fields.Number}}</span>, {{pub.Fields.Year}}
+			    </span>
+			    <!-- arrow to expand, common to all cases (controlled by showMore variable for each pub) -->
+                            <i id="morearrow" class="material-icons color-theme"> {{showMore ? 'arrow_downward' : 'arrow_forward'}} </i> </a>
+			</span>	
+                        
+                        <!-- Extra info all pubs may have, show only if available. Abstract, DOI link, arXiv link, URL, slides link, and BibTex reference (always) -->
+			<div ng-show="showMore" id="pubhidden">
+				<span ng-show="pub.Fields.Abstract"> 
+                                    <p style="text-align:justify"><strong>Abstract: </strong>
+                                    {{pub.Fields.Abstract}} </p>
+                                </span>
+				<div id="pubButtons">
+					<a class="label label-theme" ng-show="pub.Fields.Doi" href="https://doi.org/{{pub.Fields.Doi}}">DOI: {{pub.Fields.Doi}}</a> 
+					<a class="label label-theme" ng-show="pub.Fields.Eprint" href="http://arxiv.org/abs/{{pub.Fields.Eprint}}">arXiv: {{pub.Fields.Eprint}} [{{pub.Fields.Eprintclass}}]</a> 
+					<a class="label label-theme" ng-show="pub.Fields.Url" href="{{pub.Fields.Url}}">Link</a> 
+					<a class="label label-theme" ng-show="pub.Fields.Slides" href="{{pub.Fields.Slides}}">Slides</a>
+					<a class="label label-theme" ng-click="open(pub)">BibTeX</a>
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>
+<p>
+<small>
+<a href="/~poldap/data/pubs/bibfile_students.bib">Download the .bib file with the student's theses.</a>
+</small>
+</p>
