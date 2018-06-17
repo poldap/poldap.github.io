@@ -34,7 +34,7 @@ angular.module('acadApp')
 	};
 
   	// Read data from bibfile
-  	$http({method: 'GET', url: '/~poldap/data/pubs/bibfile_students.bib'}).
+  	$http({method: 'GET', url: 'data/pubs/bibfile_students.bib'}).
   	then(function(response) {
 	  	// Parse bibtex to JSON
 	  	rawbib = response.data;
@@ -75,7 +75,7 @@ angular.module('acadApp')
 	// Open the bibtex modal
 	$scope.open = function (pub) {
 		var modalInstance = $uibModal.open({
-			templateUrl: '/~poldap/html/bibmodal.html',
+			templateUrl: 'html/bibmodal.html',
 			controller: 'BibModalCtrl',
 			size: 'lg',
 			resolve: {

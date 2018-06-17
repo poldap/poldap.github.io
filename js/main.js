@@ -3,27 +3,27 @@ angular.module('acadApp', ['ngRoute', 'ui.bootstrap', 'ngResource'])
 .config(function($routeProvider, $locationProvider) {
   $routeProvider
     .when('/', {
-      templateUrl:'/~poldap/html/main.html'
+      templateUrl:'html/main.html'
     })
     .when('/pubs', {
       controller:'PubsCtrl',
-      templateUrl:'/~poldap/html/pubs.html'
+      templateUrl:'html/pubs.html'
     })
     .when('/bio', {
-      templateUrl:'/~poldap/html/bio.html'
+      templateUrl:'html/bio.html'
     })
     .when('/more', {
-      templateUrl:'/~poldap/html/more.html'
+      templateUrl:'html/more.html'
     })
     .when('/teaching', {
         controller: 'TeachCtrl',
-      templateUrl:'/~poldap/html/teaching.html'
+      templateUrl:'html/teaching.html'
     })
     .when('/talks', {
-      templateUrl:'/~poldap/html/talks.html'
+      templateUrl:'html/talks.html'
     })
     .otherwise({
-      redirectTo:'/~poldap/html/main.html'
+      redirectTo:'html/main.html'
     })
 
   $locationProvider.html5Mode(false);
