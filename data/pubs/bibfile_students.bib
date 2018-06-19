@@ -1,30 +1,60 @@
 % Accepted journal papers and submitted pre-prints
 
-@thesis{TensorFlowOpt,
-	Author = {Gabriel Bengtsson and Jesper Larsson, Johan Sörell and Elias Ågeby},
-	School = {KTH Royal Institute of Technology},
-	Title = {Large scale optimization on a GPU},
-	Year = {2018},
-	Type = {Bachelor's Thesis},
-	Url = {},
-	Abstract = {The theory and practice of convex optimization has had a profound impact on many scientific fields, and provides a way to formalize and solve real world problems. However, classical software for solving convex optimization problems scales poorly to the massive optimization problems that characterize modern big data problems. At the same time, the exploding interest in machine learning, and in particular deep learning, has led to programming frameworks that can effectively use specialized computer hardware such as graphical processing units (GPUs) for high performance computing. An example of such a framework is Google’s TensorFlow. However, the basic building blocks of TensorFlow are very similar to those used in a class of optimization methods known collectively as matrix-free or proximal optimization methods, and it should be possible to use the power of these computational platforms for deep learning also for convex optimization. Within the Department of Information Science and Engineering at KTH, we recently developed an optimization algorithm for a problem related to the analysis of image-based biomedical assays used in immunology. The proposed project will explore the idea of implementing this optimization algorithm in TensorFlow, thereby allowing it to be easily executed on powerful GPUs. For this project, you do not need prior knowledge of convex optimization, machine learning or TensorFlow. However, you do need to be able to program in Python. The project work, i.e., the implementation and testing of the algorithm, can be carried out on a standard PC. For final testing, we will be able to provide access to a computer with high performance GPU, and we will provide both simulated and real biomedical data to run the algorithm on.},
-}
-
-@thesis{SleepScoringML,
-	Author = {Lovisa Colérus and Karla Rehn, David Ekvall and Rebecka Winqvist, Josef Malmström and Najib Yavari},
-	School = {KTH Royal Institute of Technology},
-	Title = {Machine learning for sleep scoring},
-	Year = {2018},
-	Type = {Bachelor's Thesis},
-	Url = {},
-	Abstract = {Sleep scoring is a process in which biological and pharmacological researchers analyze the sleep of a subject (animal or human). To do this, they capture signals while the subject sleeps and they "score" or classify time periods of these signals in several categories. These categories attempt to identify different stages or states within the sleep process. Sleep scoring is widely used by scientists to understand the fundamental networking of the brain, as well as to ensure certain properties of numerous pharmacological compounds. The technique is easy to implement and inexpensive. However, the analysis of the data is time consuming and requires a lot of manual work by experienced researchers. The proposed project is to automate the process of sleep scoring, by training a classifier that classifies a section of electroencephalography (EEG) data to the corresponding category of sleep that it represents. A first version of the solution could use built-in machine learning functionality in Matlab to train the classifier. A second, more advanced, solution is to use state-of-the-art machine learning in the form of deep learning implemented in Python using TensorFlow. It will be up to the students which solution or solutions to ultimately select. Basic knowledge of Matlab is helpful for implementing the first solution. Good knowledge of Python will be required for the second solution.},
-}
-
 @mastersthesis{Jones2018,
 	Author = {Damien Jones},
 	School = {KTH Royal Institute of Technology},
-	Title = {Automated Rodent Sleep Analysis with Modern Machine Learning Methods},
+	Title = {Automated rodent sleep analysis with modern machine learning methods},
 	Year = {2018},
 	Url = {http://kth.diva-portal.org/smash/record.jsf?pid=diva2%3A1212458&dswid=-7907},
 	Abstract = {Sleep staging is the use of electrophysiological signals to determine the quality and architecture of sleep in an animal. Currently, to achieve this, researchers manually classify contiguous sections of electroencephalographic and electromyographic signals into defined sleep modes or stages. This is a slow and laborious process. Many attempts at semi-automated solutions can be found in the literature. In these attempts, a researcher manually classifies a portion of the data from a specific rodent. This data is used to train a model which can then be used to classify the rest of the data from that rodent. While such solutions can be found in commercial products, they still require hours of manual classification to be done by the researcher. In this thesis, I explore two machine learning methods in an attempt to fully automate the process of sleep staging. The automation consists of building a classifier that can classify data from a new rodent, using only manually classified data from previous rodents. This classifier should classify this new rodent’s data at a sufficiently high accuracy. While there have also been attempts at such a system in the past, none of them have reached a level of accuracy that is acceptable for use. The two methods implemented in this thesis are support vector machines (SVM) and convolution neural networks (CNN). The results obtained are promising, with the results from SVM being on the cusp of real world usability for automated sleep staging.},
+}
+
+@thesis{F3A2018,
+	Author = {Lovisa Colérus and Karla Rehn},
+	School = {KTH Royal Institute of Technology},
+	Title = {Automatic sleep scoring using {K}eras [{P}roject: {M}achine learning for sleep scoring]},
+	Year = {2018},
+	Type = {Bachelor's Thesis},
+	Url = {},
+	Abstract = {Sleep scoring is a diagnosis tool used for medical research. Using electroencefalography (EEG) a researcher observes the electrical activity in the brain and classifies the EEGinto different stages. The goal of this project is to develop a tool for automatic classification of sleep data from rodents, one of the most common test subjects in modern medical researchEEG data from AstraZeneca is used to train a neural networkdeveloped with Keras. Some augmentation of the data is done to increase the accuracy. The data is classified into different sleep stages with 91\% accuracy.},
+}
+
+@thesis{F3B2018,
+	Author = {Josef Malmström and Najib Yavari},
+	School = {KTH Royal Institute of Technology},
+	Title = {Power spectral density based sleep scoring using artificial neural networks [{P}roject: {M}achine learning for sleep scoring]},
+	Year = {2018},
+	Type = {Bachelor's Thesis},
+	Url = {},
+	Abstract = {Sleep scoring is the process that medical researchers use to analyze the sleep of a subject. By looking at signals in the brain and muscles, it is possible to determine the current sleep state of the subject. The procedure is traditionally done manually, requiring a lot of tedious processing of data. In this report, a machine learning system that automates the process of sleep scoring is studied and developed. The system works by estimating the power spectral density of the electroencephalography (EEG) and electromyography (EMG) signals, and training an artificial neural network to classify the correct sleep state. The signal processing was done in Python and the artificial neural network was implemented in Keras, using a TensorFlow back end. Finally, the implemented system proved to have an accuracy comparable to that of manual sleep scoring on five different rat datasets. Additionally, the system was able to generalize beyond the rat specimens it was trained on, meaning it could potentially be used on specimens that lack labeled sample data. },
+}
+
+@thesis{F3C2018,
+	Author = {David Ekvall and Rebecka Winqvist},
+	School = {KTH Royal Institute of Technology},
+	Title = {Machine learning for sleep scoring [{P}roject: {M}achine learning for sleep scoring]},
+	Year = {2018},
+	Type = {Bachelor's Thesis},
+	Url = {},
+	Abstract = {In today’s society, Artifical Intelligence (AI) has become one of the most controversial research topics. The Artifical Neural Network (ANN) is a form of AI designed to mimic the human brain and is typically used for pattern recognition. This is especially useful within the medical field where ANN:s have already been implemented in a variety of applications. This project focuses on the possibility of extending the use of ANN:s to also be used to facilitate diagnosing sleep disorders, by investigating how well they can classify sleep states in rats. Two different types of network architectures were considered in this project: one fed with information from one single sleep state, and one fed with information from multiple consecutive sleep states. The highest classification accuracy achieved by the networks were 96.78 \% and 97.02 \% respectively. The networks were fed with features extracted from the provided Electroencephalography (EEG) and Electromyography (EMG) data of the rats. This enabled a reduction of the complexity of the ANNs, which resulted in low training times. It was concluded that feeding the network with extracted features from the data was a good approach, and that a network with access to information about several sleep states classified with the best accuracy.},
+}
+
+@thesis{F2A2018,
+	Author = {Gabriel Bengtsson and Jesper Larsson},
+	School = {KTH Royal Institute of Technology},
+	Title = {Source localization by inverse diffusion and convex optimization [{P}roject: {L}arge scale optimization on a {GPU}]},
+	Year = {2018},
+	Type = {Bachelor's Thesis},
+	Url = {},
+	Abstract = {The purpose of this project was to implement an inverse diffusion algorithm to locate the sources of an emitted substance. This algorithm has yielded successful results when applied to biological cell detection, and it has been suggested that the run time could be greatly reduced if adaptions for a computation graph framework are made. This would automate calculations of gradients and allow for faster execution on a graphics processing unit. The algorithm implementation was realized in TensorFlow, which is primarily a machine learning oriented programming library. Computer-generated biological test images were then used to evaluate the performance using regular image analysis software and accuracy metrics. Comparisons reveal that the TensorFlow implementation of the algorithm can match the accuracy metrics of traditional implementations of the same algorithm. Viewed in a broader scope this serves as an example to highlight the possibility of using computation graph frameworks to solve large scale optimization problems, and more specifically inverse problems.},
+}
+
+@thesis{F2B2018,
+	Author = {Johan Sörell and Elias Ågeby},
+	School = {KTH Royal Institute of Technology},
+	Title = {Inverse diffusion by proximal optimization with {TensorFlow} [{P}roject: {L}arge scale optimization on a {GPU}]},
+	Year = {2018},
+	Type = {Bachelor's Thesis},
+	Abstract = {We present a method for implementing a large scale, proximal optimization algorithm in a machine learning framework to solve an inverse problem. The algorithm is based on a previously developed method for analyzing data of some image-based immunoassays in the context of detecting diffused cells. By employing TensorFlow through it’s Python API, parallelized computations on graphical processing units, distributed processing, automatic gradient computation and computational efficiency are made available for implementation. Image processing methods are also utilized throughout the implementation, resulting in a F1-score of 0.91. The performance matches previous implementations of the algorithm presented, leading to the conclusion that the TensorFlow platform is well suited and provides advantages over traditional methods. We conclude that the method presented coupled with the resulting performance is a proof of concept, by providing an example of implementing convex optimization in a machine learning framework.},
+	Url = {},
 }

@@ -2139,6 +2139,23 @@ FUNCTION {mastersthesis}
   if.url.std.interword.spacing
 }
 
+FUNCTION {thesis}
+{ std.status.using.comma
+  start.entry
+  if.url.alt.interword.spacing
+  format.authors "author" output.warn
+  name.or.dash
+  format.article.title "title" output.warn
+  format.master.thesis.type output.nonnull
+  format.school "school" bibinfo.warn output
+  format.address "address" bibinfo.check output
+  format.date "year" output.warn
+  format.note output
+  format.url output
+  fin.entry
+  if.url.std.interword.spacing
+}
+
 FUNCTION {misc}
 { std.status.using.comma
   start.entry

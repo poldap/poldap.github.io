@@ -54,6 +54,12 @@
 % Footnotes in tables
 \usepackage{footnote}
 
+% Tables that can span several pages
+\usepackage{longtable}
+
+% Several biblographies
+\usepackage{bibunits}
+
 \begin{document}
 
   % Remove page numbers
@@ -74,36 +80,36 @@
     \begin{tabular}{rl}
       \textsc{Place and date of birth:} & Barcelona, Catalonia, on 13 September 1990 \\
       \textsc{Home address:} & Carl Malmstens v\"{a}g 8, Lgh 1103, Solna, Sweden \\
-      \textsc{Mobile phone:} & +46 (0)7-294-2302 \\
+      \textsc{Mobile phone:} & +46 (0)7-294-29302 \\
       \textsc{Email:} & \href{mailto:poldap@kth.se}{\nolinkurl{poldap@kth.se}} \\
       \textsc{Website:} & \href{https://poldap.github.io}{\url{poldap.github.io}}
     \end{tabular}
 
-%----------------------------------------------------------------------------------------
-%	WORK EXPERIENCE 
-%----------------------------------------------------------------------------------------
+  %----------------------------------------------------------------------------------------
+  %  WORK EXPERIENCE 
+  %----------------------------------------------------------------------------------------
 
-  \section{Research Experience}
+  \section{Research experience}
   
     \begin{tabular}{r|p{13cm}}
     
       \textsc{2019 Aug} 	& Ph.D. Thesis [Expected] \\
-      \textsc{2014 Sept} 	& \emph{Signal processing and non-linear modeling} \\
+      \textsc{2014 Sept} 	& \emph{Inverse problems in signal processing: Functional optimization, parameter estimation and machine learning} \\
 				& \footnotesize{ \textbf{Department of Information Science and Engineering}, School of Electrical Engineering and Computer Science,
-				  KTH Royal Institute of Technology, Stockholm, Sweden.} \\
+				  KTH Royal Institute of Technology, Stockholm, Sweden. Supervisor: \textbf{Prof. Joakim Jald\'{e}n}.} \\
       \multicolumn{2}{c}{} \\
 
       \textsc{2014 Sept} 	& Research Engineer \\
       \textsc{2014 Mar} 	& \emph{Probability density estimation, a review of the state of the art.} \\ 
 				& \footnotesize{ \textbf{Department of Signal Processing}, School of Electrical Engineering,
-				  KTH Royal Institute of Technology, Stockholm, Sweden.} \\
+				  KTH Royal Institute of Technology, Stockholm, Sweden. Supervisor: \textbf{Prof. Joakim Jald\'{e}n}.} \\
       \multicolumn{2}{c}{} \\
       %------------------------------------------------
 
       \textsc{2014 Mar} 	& Master's thesis \\
       \textsc{2013 Aug} 	& \emph{ Normalization of remote sensing imagery for automatic information extraction } \\ 
 				& \footnotesize{ \textbf{Department of Communication Theory}, School of Electrical Engineering,
-				  KTH Royal Institute of Technology, Stockholm, Sweden.} \\
+				  KTH Royal Institute of Technology, Stockholm, Sweden. Supervisors and examiner: \textbf{Dr. Felipe Calderero, Prof. Ferran Marqu\'{e}s and Prof. Markus Flierl}.} \\
       \multicolumn{2}{c}{} \\
 
       %------------------------------------------------
@@ -112,7 +118,7 @@
       \textsc{2012 Apr} 	& \emph{Image analysis for sport events classification, a review of the state of the art.} \\ 
 				& \footnotesize{ \textbf{Image Processing Group (GPI)}, Department of Signal Theory and 
 				  Communications (TSC), \emph{Escola T\`{e}cnica Superior d'Enginyeria de Telecomunicaci\'{o} 
-				  de Barcelona}, UPC BarcelonaTech.} \\
+				  de Barcelona}, UPC BarcelonaTech. Supervisor: \textbf{Prof. Ferran Marqu\'{e}s}.} \\
 
     \end{tabular}
 
@@ -140,11 +146,14 @@
   %----------------------------------------------------------------------------------------
   %	PUBLICATIONS
   %----------------------------------------------------------------------------------------
+  \begin{bibunit}[IEEEtran_Pol]
     \renewcommand\refname{Publications}
     \nocite{AguilaPla2017,AguilaPla2017a,AguilaPla2018,AguilaPla2018a,AguilaPla2014,Mabtech2017}
-    \bibliographystyle{IEEEtran_Pol}
-    \bibliography{../pubs/bibfile}
-	
+    %\bibliographystyle{IEEEtran_Pol}
+    %\bibliography{../pubs/bibfile}
+    \footnotesize{
+    \putbib[../pubs/bibfile]}
+  \end{bibunit}
   %----------------------------------------------------------------------------------------
   %	SCHOLARSHIPS AND ADDITIONAL INFO
   %----------------------------------------------------------------------------------------
@@ -153,7 +162,7 @@
     \begin{savenotes}
     \begin{tabular}{r|p{13cm}}
       
-      \textsc{2018 Jun} & Travel grants. Total amount of $43000\,\mathrm{SEK}$.\\
+      \textsc{2018 Jun} & Travel grants. Total amount $\approx43000\,\mathrm{SEK}$.\\
       \textsc{2017 Sep} & \footnotesize{\textbf{KTH Opportunities Fund} project scholarship,
 			  \textbf{Knut and Alice Wallenberg Jubilee appropriation} travel grant,
 			  \textbf{\AA forsk Foundation} travel grant and 
@@ -163,11 +172,11 @@
       \multicolumn{2}{c}{} \\
       
       \textsc{2013 Mar} & Exchange studies scholarships \\ 
-      \textsc{2012 Aug} & \footnotesize{\textbf{Erasmus} and \textbf{AGAUR}\footnote{Catalan University and Research Scholarships Agency} exchange studies scholarships.}  \\
+      \textsc{2012 Aug} & \footnotesize{\textbf{Erasmus} and \textbf{AGAUR}\footnote{~Catalan Agency for Management of University and Research Grants} exchange studies scholarships.}  \\
       \multicolumn{2}{c}{} \\
 
       \textsc{2009 Jun}	& Promotion's top-10 award. Ranked $4^{\mathrm{th}}$. \\
-      \textsc{2008 Sep}	& \footnotesize{Receiver of the UPC BarcelonaTech award for \textbf{first 
+      \textsc{2008 Sep}	& \footnotesize{Receiver of the \textbf{UPC BarcelonaTech award for first 
 			  year students with top-10 grades} in Telecommunications Engineering.} \\
 
     \end{tabular}
@@ -177,23 +186,32 @@
   %	Contact with the scientific community
   %----------------------------------------------------------------------------------------
   
-  \section{International participation in the scientific community}
+  \section{Participation in the scientific community}
 
-    \begin{tabular}{r|p{13cm}}
-      
+    \begin{longtable}[H]{r|p{13.5cm}}
+    
+      \textsc{2018 Jul} & Attendance to the \emph{Thirty-fifth International Conference on Machine
+						  Learning} (\textbf{ICML 2018}). \\
+						& \footnotesize{Stockholmsm\"{a}ssan, Stockholm, Sweden.} \\
+	  \multicolumn{2}{c}{} \\
+						
       \textsc{2018 Jun} & Poster presentation within the \emph{SIAM Conference on Imaging Science}
-			  (SIAM-IS 2018), titled \textbf{Source localization by spatially
+			  (\textbf{SIAM-IS 2018}), titled \textbf{Source localization by spatially
 			  variant blind deconvolution}. \\
-			& \footnotesize{University of Bologna, Bologna, Italy.}\\
+			& \footnotesize{\textbf{University of Bologna}, Bologna, Italy.}\\
       \multicolumn{2}{c}{} \\
     
       \textsc{2018 Apr} & Poster presentation within the \emph{IEEE International Conference 
-			  on Acoustics, Speech and Signal Processing} (ICASSP 2018), titled
+			  on Acoustics, Speech and Signal Processing} (\textbf{ICASSP 2018}), titled
 			  \textbf{Convolutional group-sparse coding and source localization}. \\
 			& \footnotesize{Calgary Talus Convention Centre, Calgary, Alberta, Canada.} \\
 			& \\
+			& \textsc{9 - 13 Apr}, Research visit at \textbf{Professor Stephen P. Boyd's group}. \\
+			& \footnotesize{Information Systems Laboratory, Department of \textbf{Electrical Engineering, 
+			  Stanford University}, Stanford, California, United States of America} \\
+			& \\
 			& Poster presentation within the \emph{2018 IEEE $15^{\mathrm{th}}$ International
-			  Symposium on Biomedical Imaging} (ISBI 2018), titled
+			  Symposium on Biomedical Imaging} (\textbf{ISBI 2018}), titled
 			  \textbf{Cell detection on image-based immunoassays}.\\
 			& \footnotesize{Omni Shoreham Hotel, Washington, D.C., United States of America.} \\
       \multicolumn{2}{c}{} \\
@@ -208,56 +226,57 @@
 			  algorithms for imaging and vision}.}\\
       \multicolumn{2}{c}{} \\
       
-      \emph{Current}	& Reviewer for the IEEE Transactions on Signal Processing \\
+      \emph{Current}	& Reviewer for the \textbf{IEEE Transactions on Signal Processing} \\
       \textsc{2015 Aug} & \footnotesize{Reviewed \textbf{2 articles} for the journal.} \\
       
+    \end{longtable}
+  
+  %----------------------------------------------------------------------------------------
+  %	TEACHING EXPERIENCE
+  %----------------------------------------------------------------------------------------
+  \section{Teaching experience}
+  
+    \begin{bibunit}[IEEEtran_Pol]
+    \begin{tabular}{r|p{13cm}}
+      
+      \emph{Current}	 & Supervision of Master's and Bachelor's thesis \\
+      \textsc{2017 Feb}  & \footnotesize{Main supervisor of a master's thesis, \cite{Jones2018}. 
+							Designer of two bachelor's thesis projects, attracting $5$ 
+							different groups of two students. Main supervision for $2$ of them,
+							i.e., \cite{F2A2018,F2B2018}, and co-supervisor for the remaining three,
+							i.e., \cite{F3A2018,F3B2018,F3C2018}. } \\      
+      \multicolumn{2}{c}{} \\
+      
+	  \emph{Current}     & Teaching assistance in the course \textbf{EQ2300: Digital Signal Processing} \\
+	  \textsc{2014 Sept} & \footnotesize{Taught every year \textsc{Nov -- Dec} by Prof. Joakim Jald\'{e}n and 
+							one to three assistants. Approximate numbers: $100\,\mathrm{h}$ of guidance of 
+							exercise sessions (with theory review) and lectures, $140\,\mathrm{h}$ of 
+							class preparation, $45\,\mathrm{h}$ of course and material development,
+							$100\,\mathrm{h}$ of grading of projects and exams, and $20\,\mathrm{h}$ of private tutoring.} \\
+     
     \end{tabular}
 
-%----------------------------------------------------------------------------------------
-%	REFERENCES
-%----------------------------------------------------------------------------------------
-% \section[title]{References }
-% \begin{center}
-% \begin{tabular}{lccc}
-% Name & \textsc{\href{https://imatge.upc.edu/web/ferran}{Dr. Ferran Marqués}} & \textsc{\href{https://spcom.upc.edu/index.php?option=com_spcom\&Itemid=3\&id=24}{Dr. Josep Vidal}}  & \textsc{\href{http://www.csc.kth.se/~johnf/}{Dr. John Folkesson}}\\
-% Group & \textsc{\href{http://imatge.upc.edu}{GPI}} & \textsc{\href{http://spcom.upc.edu}{SPCOM}} & \textsc{\href{http://www.kth.se/en/csc/forskning/cas}{CAS}} \\ 
-% Department & \textsc{\href{http://www.tsc.upc.edu/en}{TSC}} & \textsc{\href{http://www.tsc.upc.edu/en}{TSC}} & \textsc{CSC}\\  
-% University & \textsc{UPC} & \textsc{UPC}  & \textsc{KTH}\\
-% Email & \href{mailto:ferran.marques@upc.edu}{ferran.marques@upc.edu} & \href{mailto:josep.vidal@upc.edu}{josep.vidal@upc.edu} & \href{mailto:johnf@csc.kth.se}{johnf@csc.kth.se} \\
-% Telephone & +34 93 401 68 32 & + 34 93 401 64 57  & +46 (0)8-790-6201 \\
-% \multicolumn{4}{c}{}\\
-% \end{tabular}
-
-% 
-% \begin{tabular}{lcc}
-% Name & \textsc{Dr. Juan-Manuel Rius Casals}& \textsc{Dr. Antonio Bonafonte}  \\
-% Group & \textsc{\href{http://www.tsc.upc.edu/antennalab/}{AntennaLab}} & \textsc{\href{http://www.talp.upc.edu}{TALP}} \\
-% Department & \textsc{\href{http://www.tsc.upc.edu/en}{TSC}}  & \textsc{\href{http://www.tsc.upc.edu/en}{TSC}}\\
-% University & \textsc{UPC} & \textsc{UPC} \\
-% Email & \href{mailto:rius@tsc.upc.edu}{rius@tsc.upc.edu}  & \href{mailto:antonio.bonafonte@upc.edu}{antonio.bonafonte@upc.edu}\\
-% Telephone & +34 93 401 72 19 & + 34 93 401 07 64 \\
-% 
-%  
-% \end{tabular}
-% 
-% \end{center}
-
-
+	
+      \renewcommand\refname{\normalsize{Supervised theses}}
+	  \footnotesize{
+      \putbib[../pubs/bibfile_students]}
+	\end{bibunit}
+  
   %----------------------------------------------------------------------------------------
   %	LANGUAGES
   %----------------------------------------------------------------------------------------
 
   \section{Languages}
 
-    \begin{tabular}{rl}
+    \begin{tabular}{rp{10cm}}
       
-      \textsc{Mother tongue:} & Catalan and Spanish \\
+      \textsc{Mother tongue (C2+):} & Catalan and Spanish \\
       
-      \textsc{Professional:} & English \\
+      \textsc{Professional (C2):} & English \\
       
-      \textsc{Conversational:} & Swedish \\
+      \textsc{Conversational (B2):} & Swedish \\
       
-      \textsc{Basic:} & Italian and French (\textsc{DELF} A-2, \textsc{2006 Aug})
+      \textsc{Basic (A1-A2):} & Italian and French (\textsc{DELF} A2, \textsc{2006 Aug})
       
     \end{tabular}
 
@@ -265,32 +284,33 @@
   %	COMPUTER SKILLS 
   %----------------------------------------------------------------------------------------
 
-  \section{Technical and Computer Skills}
+  \vspace{-10pt}
+  
+  \section{Other skills}
 
-  \begin{tabular}{rl}
-  Technical skills: & Electronic design and measurement, network testing and \\
-  & simulation, use of vector signal analysers for digital  \\
-  & communications, Antenna design and performance analysis. \\
-  &\\
-  Computer skills:& Comfortable performing administrative tasks \\
-  & in both Linux and Windows environments. \\
-  &\\
-  Programming languages: & \textsc{C, Java, Matlab, Bash } \\
+  \begin{tabular}{rp{12cm}}
+	Technical skills:  & Experienced in the administration of GPU-enabled Linux computational servers.
+						 Experienced in the maintenance of websites for academic groups.
+						 Professional in electronic design and measurement, network testing and 
+						 simulation, measurement of digital communications systems, and antenna design
+						 and performance analysis. \vspace{5pt}\\ 
+	Programming:       &  \textsc{C/C++, Java, R, Python, TensorFlow, Bash, Matlab, \LaTeX}  \vspace{5pt}\\ 
+	Soft skills: 	   & Social and friendly collaborator. Accomplished and praised supervisor of 
+						 student theses and teacher of exercise sessions. Very attentive to 
+						 detail.
 
   \end{tabular}
 
+  %----------------------------------------------------------------------------------------
+  % INTERESTS AND ACTIVITIES
+  %----------------------------------------------------------------------------------------
 
-%----------------------------------------------------------------------------------------
-%	INTERESTS AND ACTIVITIES
-%----------------------------------------------------------------------------------------
+  \vspace{-10pt}
+  
+  \section{Interests and activities}
 
-\section{Interests and Activities}
-
-Linux and Open Source community \\
-Writing short stories\\
-Hiking, skiing, cycling, skating and capoeira
-
-%----------------------------------------------------------------------------------------
-
+    Linux, Free / Libre / Open-source software. Open-access research. Philosophy and sociology. \\
+    Regular opera-goer, moderate cinephile, initiated tap-dancer and avid reader. \\
+    Hiking enthusiast and ex-capoeira practicioner.
 
 \end{document}
