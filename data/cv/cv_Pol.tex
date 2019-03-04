@@ -60,6 +60,9 @@
 % Several biblographies
 \usepackage{bibunits}
 
+% Trademark symbol
+\usepackage{textcomp}
+
 \begin{document}
 
   % Remove page numbers
@@ -82,7 +85,7 @@
       \textsc{Home address:} & Carl Malmstens v\"{a}g 8, Lgh 1103, Solna, Sweden \\
       \textsc{Mobile phone:} & +46 (0)7-294-29302 \\
       \textsc{Email:} & \href{mailto:poldap@kth.se}{\nolinkurl{poldap@kth.se}} \\
-      \textsc{Website:} & \href{https://poldap.github.io}{\url{poldap.github.io}}
+      \textsc{Website:} & \href{https://poldap.github.io}{\nolinkurl{poldap.github.io}}
     \end{tabular}
 
   %----------------------------------------------------------------------------------------
@@ -93,32 +96,32 @@
   
     \begin{tabular}{r|p{13cm}}
     
-      \textsc{2019 Aug} 	& Ph.D. Thesis [Expected] \\
+      \textsc{2019 Aug} 	& Ph.D. Thesis \\
       \textsc{2014 Sept} 	& \emph{Inverse problems in signal processing: Functional optimization, parameter estimation and machine learning} \\
-				& \footnotesize{ \textbf{Division of Information Science and Engineering}, School of Electrical Engineering and Computer Science,
-				  KTH Royal Institute of Technology, Stockholm, Sweden. Supervisor: \textbf{Prof. Joakim Jald\'{e}n}.} \\
+				& \footnotesize{ Division of Information Science and Engineering, School of Electrical Engineering and Computer Science,
+				  \textbf{KTH} Royal Institute of Technology, Stockholm, Sweden. Supervisor: \textbf{Prof. Joakim Jald\'{e}n}.} \\
       \multicolumn{2}{c}{} \\
 
       \textsc{2014 Sept} 	& Research Engineer \\
       \textsc{2014 Mar} 	& \emph{Probability density estimation, a review of the state of the art.} \\ 
-				& \footnotesize{ \textbf{Department of Signal Processing}, School of Electrical Engineering,
-				  KTH Royal Institute of Technology, Stockholm, Sweden. Supervisor: \textbf{Prof. Joakim Jald\'{e}n}.} \\
+				& \footnotesize{Department of Signal Processing, School of Electrical Engineering,
+				  \textbf{KTH} Royal Institute of Technology, Stockholm, Sweden. Supervisor: \textbf{Prof. Joakim Jald\'{e}n}.} \\
       \multicolumn{2}{c}{} \\
       %------------------------------------------------
 
       \textsc{2014 Mar} 	& Master's thesis \\
       \textsc{2013 Aug} 	& \emph{ Normalization of remote sensing imagery for automatic information extraction } \\ 
-				& \footnotesize{ \textbf{Department of Communication Theory}, School of Electrical Engineering,
-				  KTH Royal Institute of Technology, Stockholm, Sweden. Supervisors and examiner: \textbf{Dr. Felipe Calderero, Prof. Ferran Marqu\'{e}s and Prof. Markus Flierl}.} \\
+				& \footnotesize{Department of Communication Theory, School of Electrical Engineering,
+				  \textbf{KTH} Royal Institute of Technology, Stockholm, Sweden. Supervisors and examiner: \textbf{Dr. Felipe Calderero, Prof. Ferran Marqu\'{e}s and Prof. Markus Flierl}.} \\
       \multicolumn{2}{c}{} \\
 
       %------------------------------------------------
 
       \textsc{2012 Aug} 	& Undergraduate research \\
       \textsc{2012 Apr} 	& \emph{Image analysis for sport events classification, a review of the state of the art.} \\ 
-				& \footnotesize{ \textbf{Image Processing Group (GPI)}, Department of Signal Theory and 
+				& \footnotesize{Image Processing Group (GPI), Department of Signal Theory and 
 				  Communications (TSC), \emph{Escola T\`{e}cnica Superior d'Enginyeria de Telecomunicaci\'{o} 
-				  de Barcelona}, UPC BarcelonaTech. Supervisor: \textbf{Prof. Ferran Marqu\'{e}s}.} \\
+				  de Barcelona}, \textbf{UPC BarcelonaTech}. Supervisor: \textbf{Prof. Ferran Marqu\'{e}s}.} \\
 
     \end{tabular}
 
@@ -149,24 +152,36 @@
   \begin{bibunit}[IEEEtran_Pol]
     \renewcommand\refname{Publications}
     \nocite{AguilaPla2019b,AguilaPla2019a,AguilaPla2019,AguilaPla2017,AguilaPla2017a,AguilaPla2018,AguilaPla2018a,AguilaPla2014,Mabtech2017}
-    %\bibliographystyle{IEEEtran_Pol}
-    %\bibliography{../pubs/bibfile}
     \footnotesize{
     \putbib[../pubs/bibfile]}
+
+    \section{Impact case}
+        
+        The technology developed in \cite{AguilaPla2017,AguilaPla2017a}, protected by \cite{Mabtech2017},
+        was implemented by Mabtech AB and Quamcom Research \& Technology AB, resulting on a successful product
+        for biomedical researchers by the name of Mabtech IRIS (\url{https://www.mabtech.com/iris}).
+    
   \end{bibunit}
+  
   %----------------------------------------------------------------------------------------
   %	SCHOLARSHIPS AND ADDITIONAL INFO
   %----------------------------------------------------------------------------------------
-
   \section{Grants and awards}
     \begin{savenotes}
     \begin{tabular}{r|p{13cm}}
-      
-      \textsc{2019 Jan} & Travel grants. Total amount $\approx 64200\,\mathrm{SEK}\approx 7\,\mathrm{k\$} $.\\
-      \textsc{2017 Sep} & \footnotesize{Malme's foundation \textbf{travel grant} through the EECS school at KTH, 
+      % Gålöstiftelsen 14000 SEK
+      % EECS Malme stiftelsen 21200 SEK
+      % Wallenberg jubilee 4700 SEK
+      % KTH Opportunities 13200 SEK
+      % KVA Engineering sciences 19038 SEK
+      % Åforsk 6000 SEK
+      % Current sum: 78138 SEK
+      \textsc{2019 Mar} & Travel grants. Total amount $\approx 78\,\mathrm{kSEK}\approx 8.4\,\mathrm{k\$} $.\\
+      \textsc{2017 Sep} & \footnotesize{Gålöstiftelsen study \textbf{travel grant},
+              Malme's foundation \textbf{travel grant} through the EECS school at KTH, 
               KTH Opportunities Fund \textbf{project scholarship},
 			  Knut and Alice Wallenberg Jubilee appropriation \textbf{travel grant},
-			  \AA forsk Foundation \textbf{travel grant} and 
+			  \AA forsk Foundation \textbf{travel grant}, and 
 			  Engineering Sciences 2017 call from The Royal Swedish
 			  Academy of Sciences (KVA, call ES2017-0011) \textbf{project and travel 
 			  grant.}} \\
@@ -192,11 +207,19 @@
     \vspace{-10pt}
     
     \begin{longtable}[H]{r|p{13.5cm}}
+        
+      \textsc{2019 Apr} & Lecture presentation within the \emph{2019 IEEE $16^{\mathrm{th}}$ International
+			  Symposium on Biomedical Imaging} (\textbf{ISBI 2019}), titled 
+			  \textbf{SpotNet --- Learned iterations for cell detection in image-based immunoassays}\\
+			  & \footnotesize{Hilton Molino Stucky, Venice, Italy.} \\  
+			  \multicolumn{2}{c}{} \\
+			  
+			  
     
       \textsc{2019 Jan} & \textsc{7 Jan - 7 Feb}, Research visit at \textbf{Professor Jean-Luc Starck}'s group (\textbf{CosmoStat}). \\
                         & \footnotesize{Department of Astrophysics, \textbf{CEA Paris-Saclay}, Paris, France} \\
                         & \\
-                        & \textsc{14 and 28 Jan}, presentations at \textbf{Cosmostat} and \textbf{Parietal}, \textbf{NeuroSpin}, \textbf{INRIA}, respectively, titled \emph{Cell detection by functional inverse diffusion and non-negative group sparsity - Biology, physics, math and engineering}, access at \href{http://www.cosmostat.org/events/cosmoclub/cosmosclub-pol}{\texttt{www.cosmostat.org}}. \\
+                        & \textsc{14 and 28 Jan}, presentations at \textbf{Cosmostat} and \textbf{Parietal}, \textbf{NeuroSpin}, \textbf{INRIA}, respectively, titled \emph{Cell detection by functional inverse diffusion and non-negative group sparsity - Biology, physics, math and engineering}, access at \href{http://www.cosmostat.org/events/cosmoclub/cosmosclub-pol}{\texttt{www.cosmostat.org}} and \href{https://team.inria.fr/parietal/slides-of-pol-del-aguila-plas-talk-available-now-online/}{\texttt{team.inria.fr/parietal}}. \\
       \multicolumn{2}{c}{} \\
     
       \textsc{2018 Jul} & Attendance to the \emph{Thirty-fifth International Conference on Machine
@@ -227,7 +250,7 @@
 			& \footnotesize{Omni Shoreham Hotel, Washington, D.C., United States of America.} \\
       \multicolumn{2}{c}{} \\
       
-      \textsc{2017 Nov} & Oral presentation within the workshop \emph{Generative models, 
+      \textsc{2017 Nov} & Lecture presentation within the workshop \emph{Generative models, 
 			  parameter learning, and sparsity} (VMVW02), titled
 			  \textbf{Cell detection by functional inverse diffusion and group sparsity},
 			  access at \href{https://downloads.sms.cam.ac.uk/2600830/2600858.mp4}{\texttt{downloads.sms.cam.ac.uk}}. \\
@@ -258,8 +281,8 @@
 							i.e., \cite{F3A2018,F3B2018,F3C2018}. } \\      
       \multicolumn{2}{c}{} \\
       
-	  \emph{Current}     & Teaching assistance in the course \textbf{EQ2300: Digital Signal Processing} \\
-	  \textsc{2014 Sept} & \footnotesize{Taught every year \textsc{Nov -- Dec} by Prof. Joakim Jald\'{e}n and 
+	  \textsc{2018 Dec}     & Teaching assistance in the course \textbf{EQ2300: Digital Signal Processing} \\
+	  \textsc{2014 Sep} & \footnotesize{Taught every year \textsc{Nov -- Dec} by Prof. Joakim Jald\'{e}n and 
 							one to three assistants. Approximate numbers: $120\,\mathrm{h}$ of guidance of 
 							exercise sessions and lectures, $140\,\mathrm{h}$ of 
 							class preparation, $45\,\mathrm{h}$ of course and material development,
