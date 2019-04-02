@@ -70,6 +70,13 @@
 %
 % IEEEtran.cls V1.6 and later does provide this command.
 
+%% Some hacks to make my name bold (https://tex.stackexchange.com/questions/361666/why-is-the-bst-hack-for-highlighting-author-name-not-working)
+FUNCTION {highlight.if.cv.author}
+{ duplicate$ purify$ "P. del Aguila Pla" purify$ =
+    { "\textbf{" swap$ * "}" * }
+    'skip$
+  if$
+}
 
 
 % #0 turns off the display of the number for articles.
@@ -125,7 +132,7 @@ FUNCTION {default.ALTinterwordstretchfactor} { "4" }
 % #0 turns off the "dashification" of repeated (i.e., identical to those
 % of the previous entry) names. The IEEE normally does this.
 % #1 enables
-FUNCTION {default.is.dash.repeated.names} { #1 }
+FUNCTION {default.is.dash.repeated.names} { #0 }
 
 
 % The default name format control string.
@@ -1213,7 +1220,8 @@ FUNCTION {format.names}
     { s nameptr
       name.format.string
       format.name$
-      bibinfo bibinfo.check
+      highlight.if.cv.author
+      bibinfo bibinfo.check 
       't :=
       nameptr #1 >
         { nameptr num.names.shown.with.forced.et.al #1 + =
