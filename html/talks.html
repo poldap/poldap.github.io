@@ -2,6 +2,23 @@
 
 <ul class="list-group">
     <li class="list-group-item publist_row">
+        <span class="list-group-item-text" ng-click="showMoreISBI19 = !showMoreISBI19" >
+            <i class="material-icons">view_carousel</i>
+            Pol del Aguila Pla, <strong> SpotNet – Learned iterations for cell detection in image-based immunoassays, </strong> 
+            <em>[ISBI19] IEEE International Symposium on Biomedical Imaging, </em> Venice, Italy, April 2019
+            <i id="morearrow" class="material-icons color-theme">
+                {{showMoreISBI19 ? 'arrow_downward' : 'arrow_forward'}}
+            </i> </a>
+        </span>
+        <div ng-show="showMoreISBI19">
+            <p style="text-align:justify"> <strong>Abstract:</strong> In this poster, I will present an inverse problem framework to detect point and extended sources in scientific imaging. With clear applications in biology, medical sciences and astronomy, among others, our proposal is a blind deconvolution approach that allows for spatially variant point spread functions. The methodology builds on the extensive research in convolutional coding in deep learning and signal processing, and introduces group-sparsity constraints to this context. </p>
+            
+            <div id="pubButtons">
+                <a class="label label-theme" href="data/talks/SpotNet_learned_iterations_cell_detection_immunoassays.pdf">Slides</a>
+            </div>
+        </div>
+    </li>
+    <li class="list-group-item publist_row">
         <span class="list-group-item-text" ng-click="showMoreu = !showMoreu" >
             <i class="material-icons">view_carousel</i>
             Pol del Aguila Pla, <strong> Source localization by spatially variant blind deconvolution, </strong> 
