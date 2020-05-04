@@ -1,6 +1,83 @@
-<h3>Talks at international research events</h3>
-
+<style>
+table, th, td {
+  text-align: center;
+}
+</style>
+<h3>Tutorials and invited talks</h3>
 <ul class="list-group">
+    <li class="list-group-item publist_row">
+        <span class="list-group-item-text" ng-click="showMoreICASSP20tut = !showMoreICASSP20tut" >
+            <i class="material-icons">record_voice_over</i><i class="material-icons">duo</i><i class="material-icons">group_add</i>
+            Michaël Unser and Pol del Aguila Pla, <strong> Tutorial 10: Biomedical Image Reconstruction—From Foundations To Deep Neural Networks, </strong> 
+            <em>[ICASSP20] IEEE International Conference on Acoustics, Speech and Signal Processing, </em> Barcelona, Catalonia (Virtual conference), May 2020
+            <i id="morearrow" class="material-icons color-theme">
+                {{showMoreICASSP20tut ? 'arrow_downward' : 'arrow_forward'}}
+            </i> </a>
+        </span>
+        <div ng-show="showMoreICASSP20tut">
+            <p style="text-align:justify"> <strong>Abstract:</strong> Biomedical imaging plays a key role in medicine and biology. Its range of applications and its impact in research and medical practice have increased steadily during the past 4 decades. Part of the astonishing improvements in image quality and resolution is due to the use of increasingly sophisticated signal-processing techniques. This, in itself, would justify the tutorial. Nonetheless, the field is now transitioning towards the deep-learning era, where disruptive improvements and lack of theoretical background go hand-in-hand. To harness the power of these new techniques without suffering from their pitfalls, a structured understanding of the field is fundamental.</p>
+            
+            <p style="text-align:justify"> We start the tutorial by presenting the building blocks of an image-reconstruction problem, from the underlying image that lives in function spaces to its observed discrete measurements. Most importantly, we detail the small collection of forward and sampling operators that allow one to model most biomedical imaging problems, including magnetic resonance imaging, bright-field microscopy, structured-illumination microscopy, x-ray computed tomography, and optical diffraction tomography. This leads up to our exposition of 1st-generation methods (e.g., filtered back-projection, Tikhonov regularization), the regimes in which they are most attractive, and how to implement them efficiently. </p>
+
+            <p style="text-align:justify"> We then transition to 2nd-generation methods (non-quadratic regularization, sparsity, and compressive sensing) and show how advanced signal processing allows image reconstruction with smaller acquisition times, less invasive procedures, and lower radioactive and irradiation dosage. We expose the foundations of these methods (results in compressed-sensing recovery, representer theorems, infinite-divisible distributions) and the most useful algorithms in imaging (proximal operators, projected gradient descent, alternate-direction method of multipliers), again exemplifying their efficient implementation.</p>
+
+            <p style="text-align:justify"> Finally, we present the state of the art in 3rd-generation methods (deep-learning reconstruction of images), categorizing them using the building-block terminology introduced throughout the tutorial. In this manner, we emphasize the links to 1st- and 2nd-generation methods in order to provide intuition and guidelines to devise and understand novel 3rd-generation methods. Furthermore, we state the benefits of each proposal and give cautionary examples of the dangers of overreliance on training data. </p>
+            
+            <table style="width:100%">
+            <tr>
+                <th>Parts I and II</th>
+                <th>Part III (my part is here)</th> 
+                <th>Part IV</th>
+            </tr>
+            <tr>
+                <td><video width="90%" controls poster="data/talks/StillBanner_ICASSP2020Tutorial.png">
+                <source src="https://videoieeetv.s3.amazonaws.com/ns/ieeetvdl/2020/ICASSP/01_ICASSP%20finalized%20videos/T-10_P1_Tutorial_Biomedical_Imaging_Reconstruction_new.mp4"  type="video/mp4" >
+                Your browser does not support the HTML5 video tag, you can find the video of this talk hosted
+                at the <a href="https://videoieeetv.s3.amazonaws.com/ns/ieeetvdl/2020/ICASSP/01_ICASSP%20finalized%20videos/T-10_P1_Tutorial_Biomedical_Imaging_Reconstruction_new.mp4">IEEE TV</a>.
+            </video></td>
+                <td><video width="90%" controls poster="data/talks/StillBanner_ICASSP2020Tutorial.png">
+                <source src="https://videoieeetv.s3.amazonaws.com/ns/ieeetvdl/2020/ICASSP/01_ICASSP%20finalized%20videos/T-10_P2_Tutorial_Biomedical_Imaging_Reconstruction.mp4"  type="video/mp4" >
+                Your browser does not support the HTML5 video tag, you can find the video of this talk hosted
+                at the <a href="https://videoieeetv.s3.amazonaws.com/ns/ieeetvdl/2020/ICASSP/01_ICASSP%20finalized%20videos/T-10_P1_Tutorial_Biomedical_Imaging_Reconstruction_new.mp4">IEEE TV</a>.
+            </video></td>
+                <td><video width="90%" controls poster="data/talks/StillBanner_ICASSP2020Tutorial.png">
+                <source src="https://videoieeetv.s3.amazonaws.com/ns/ieeetvdl/2020/ICASSP/01_ICASSP%20finalized%20videos/T-10_P3_Tutorial_Biomedical_Imaging_Reconstruction.mp4"  type="video/mp4" >
+                Your browser does not support the HTML5 video tag, you can find the video of this talk hosted
+                at the <a href="https://videoieeetv.s3.amazonaws.com/ns/ieeetvdl/2020/ICASSP/01_ICASSP%20finalized%20videos/T-10_P1_Tutorial_Biomedical_Imaging_Reconstruction_new.mp4">IEEE TV</a>.
+            </video></td>
+            </tr>
+            </table>
+            
+            <div id="pubButtons">
+                <a class="label label-theme" href="https://2020.ieeeicassp-virtual.org/sites/icassp20/files/2020-05/ICASSP2020_Slides_TutorialBiomedicalImageReconstruction.pdf">Slides</a>
+                <a class="label label-theme" href="data/talks/Implementation_example.zip">Code</a>
+                <a class="label label-theme" href="https://2020.ieeeicassp-virtual.org/presentation/tutorial/biomedical-image-reconstruction-foundations-deep-neural-networks/">IEEE Website</a>
+            </div>
+        </div>
+    </li>
+</ul>
+
+<h3>Talks at international research events</h3>
+<ul class="list-group">
+    <li class="list-group-item publist_row">
+        <span class="list-group-item-text" ng-click="showMoreICASSP20 = !showMoreICASSP20" >
+            <i class="material-icons">record_voice_over</i><i class="material-icons">duo</i>
+            Pol del Aguila Pla, <strong> Clock synchronization over networks using sawtooth models, </strong> 
+            <em>[ICASSP20] IEEE International Conference on Acoustics, Speech and Signal Processing, </em> Barcelona, Catalonia (Virtual conference), May 2020
+            <i id="morearrow" class="material-icons color-theme">
+                {{showMoreISCASSP20 ? 'arrow_downward' : 'arrow_forward'}}
+            </i> </a>
+        </span>
+        <div ng-show="showMoreICASSP20">
+            <p style="text-align:justify"> <strong>Abstract:</strong> Clock synchronization and ranging over a wireless network with low communication overhead is a challenging goal with tremendous impact. In this paper, we study the use of time-to-digital converters in wireless sensors, which provides clock synchronization and ranging at negligible communication overhead through a sawtooth signal model for round trip times. In particular, we derive Cramér-Rao lower bounds for a linearitzation of the sawtooth signal model, and we thoroughly evaluate simple estimation techniques by simulation, giving clear and concise performance references for this technology. </p>
+            
+            <iframe src="https://drive.google.com/file/d/15J7LlN8-fBk1ZA3AmxMW_ku3LY-4o7vu/preview" width="100%" height="480"></iframe>
+            <div id="pubButtons">
+                <a class="label label-theme" href="data/talks/Slides_ICASSP2020.pdf">Slides</a>
+            </div>
+            
+        </div>
+    </li>
     <li class="list-group-item publist_row">
         <span class="list-group-item-text" ng-click="showMoreISBI19 = !showMoreISBI19" >
             <i class="material-icons">record_voice_over</i>
@@ -71,7 +148,7 @@
     </li>
     <li class="list-group-item publist_row">
         <span class="list-group-item-text" ng-click="showMore2 = !showMore2" >
-            <i class="material-icons">record_voice_over</i>
+            <i class="material-icons">record_voice_over</i><i class="material-icons">duo</i>
             Pol del Aguila Pla, <strong> Cell detection by functional inverse diffusion and group sparsity, </strong> 
             <em>[VMVW02] Workshop on Generative models, parameter learning and sparsity, </em> Isaac Newton Institute for Mathematical Sciences, University of Cambridge, UK, November 2017
             <i id="morearrow" class="material-icons color-theme">
