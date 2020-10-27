@@ -8,24 +8,28 @@ body {
 
 /* Set various colors */
 .color-theme {
-  color: #428bca;
+  /*color: #428bca;*/
+  color: #ea3323;
 }
 
 /* Set link colors */
-a:link, a:visited, a:hover { 
-    color: #428bca;
+a:link, a:visited, a:hover {
+    /*color: #428bca;*/
+    color: #ea3323;
     cursor: auto;
 }
 
 /* Labels */
 a.label-theme {
   color: white;
-  background-color: #428bca;
+  /*background-color: #428bca;*/
+  background-color: #ea3323;
 }
 
 .btn-theme {
   color: white;
-  background-color: #428bca;
+  /*background-color: #428bca;*/
+  background-color: #ea3323;
 }
 
 .container-fluid {
@@ -38,7 +42,7 @@ a.label-theme {
 .navbar div .collapse > ul > li > a {
   line-height:24px;
 }
-.navbar div .collapse > ul > li > a > i,  
+.navbar div .collapse > ul > li > a > i,
 .navbar div .navbar-header > a {
   vertical-align:top;
 }
@@ -101,4 +105,3 @@ a.label-theme {
 .pic-modal-back {
   opacity: 0.75 !important;
 }
-
