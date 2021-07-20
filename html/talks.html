@@ -6,10 +6,30 @@ table, th, td {
 <h3>Tutorials and invited talks</h3>
 <ul class="list-group">
   <li class="list-group-item publist_row">
+      <span class="list-group-item-text" ng-click="showMoreJung2021 = !showMoreJung2021" >
+          <i class="material-icons">record_voice_over</i><i class="material-icons">duo</i>
+          <i class="material-icons">group_add</i>
+          Pol del Aguila Pla, <strong>Remote and interactive image processing programming laboratories with Jupyter, </strong> Aalto University, Finland (Webinar), June 2021
+          <i id="morearrow" class="material-icons color-theme">
+              {{showMoreJung2021 ? 'arrow_downward' : 'arrow_forward'}}
+          </i> </a>
+      </span>
+      <div ng-show="showMoreJung2021">
+          <p style="text-align:justify"> <strong>Abstract:</strong> University computer laboratories as we knew them are dead. The widespread availability of networked computing resources among students (smartphones, tablets, and laptops), combined with the existence of enabling technologies like Jupyter, can no longer be ignored when allocating resources for higher education in STEM. For us at the EPFL's Biomedical Imaging Group (Prof. Michael Unser), this realisation sinked in just months before the pandemic unraveled and effectively rendered the traditional format impossible. Since then, we have been simultaneously developing and running the graded laboratory sessions for our popular basic and advanced image-processing (IP) courses (up to 280 students) as online experiences on an institute-wide JupyterLab instance (Noto at EPFL). The students become experts in the implementation and application of concepts like image wavelet transforms, morphological operators, interpolation, and neural networks for pixel classifications, and do so working at their own pace and anytime. This has resulted in excellent feedback from students and teaching assistants alike.
+
+          In this presentation, I will outline the pedagogical goals, technical work and results of this project. Among others, this will cover the development of polyglot notebooks (JavaScript + Python, harnessing the SoS framework) and a dedicated image processing JavaScript library to enable care-free realistic pixel-by-pixel IP algorithm development, the design of an interactive image viewer for Jupyter Notebooks (harnessing ipywidgets and Matplotlib), the development of a grading library for image and signal processing exercises with plagiarism detection (relying on the nbgrader framework), and our analysis of the student feedback to date.
+        </br></br>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/AF18wN37B6Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div id="pubButtons">
+              <a class="label label-theme" href="data/talks/Remote_Interactive_IP_Programming_labs_with_Jupyter.pdf">Slides</a>
+          </div>
+      </div>
+  </li>
+  <li class="list-group-item publist_row">
       <span class="list-group-item-text" ng-click="showMoreEMIM20tut = !showMoreEMIM20tut" >
           <i class="material-icons">record_voice_over</i><!--<i class="material-icons">duo</i>-->
           <i class="material-icons">group_add</i>
-          Pol del Aguila Pla, <strong> ES 02 -- Biomedical imaging as an inverse problem, </strong>
+          Pol del Aguila Pla, <strong> ES 02 - Biomedical imaging as an inverse problem, </strong>
           <em>[EMIM20] , </em> Thessaloniki, Greece (Virtual conference), August 2020
           <i id="morearrow" class="material-icons color-theme">
               {{showMoreEMIM20tut ? 'arrow_downward' : 'arrow_forward'}}
