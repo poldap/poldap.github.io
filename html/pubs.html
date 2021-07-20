@@ -1,6 +1,6 @@
-<h3>List of publications 
-<h4>Also available in 
-<a href="https://scholar.google.com/citations?user=DeK3rKEAAAAJ&hl=en"> <img src="https://scholar.google.se/favicon-png.ico" style="width:1em;margin-right:.2em;" alt="Google Scholar icon">Google Scholar</a>, 
+<h3>List of publications
+<h4>Also available in
+<a href="https://scholar.google.com/citations?user=DeK3rKEAAAAJ&hl=en"> <img src="https://scholar.google.se/favicon-png.ico" style="width:1em;margin-right:.2em;" alt="Google Scholar icon">Google Scholar</a>,
 <a itemprop="sameAs" content="https://orcid.org/0000-0003-3054-7210" href="https://orcid.org/0000-0003-3054-7210" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.2em;" alt="ORCID iD icon">orcid.org</a>,
 <a href="https://www.researchgate.net/profile/Pol_Del_Aguila_Pla?cp=shp"><img src="https://c5.rgstatic.net/m/426351313275430/images/favicon/favicon.ico" style="width:1em;margin-right:.2em;">Research Gate</a>,
 and <a href="https://www.kth.se/profile/poldap/publications/?l=en"><img src="https://www.kth.se/img/v/8.19.3/icon/favicon.ico" style="width:1em;margin-right:.2em;">KTH</a>.</h4></h3>
@@ -18,40 +18,40 @@ and <a href="https://www.kth.se/profile/poldap/publications/?l=en"><img src="htt
 
 <!-- loop through publication types -->
 <div ng-repeat="pub_info in sorted_pubs">
-        
+
         <!-- header for publication type (hide if none in this type, see header names in pubs.js) -->
 	<h4 ng-hide = "!filteredpubs.length">{{pub_info.name}}</h4>
 
 	<!-- initiate list of publications of that type (item in master list) -->
 	<ul class="list-group">
-	
+
                 <!-- loop through pubications of that type (each one of this item <li>) -->
 		<li class="list-group-item publist_row" ng-repeat="pub in filteredpubs = (pub_info.pubs | orderBy: getDate : true | filter:filter_text)">
-		
+
 			<!-- switch through publication types (set handler for click events and configure type of item) -->
 			<span class="list-group-item-text" ng-switch on="pub.EntryType" ng-click="showMore = !showMore" >
-                            
+
                             <!-- format for case: unpublished (calling it preprints) -->
 			    <span ng-switch-when="unpublished">
 			   		<i class="material-icons">insert_drive_file</i>
 			   		<span ng-show="pub.Fields.Github"> <svg height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"> <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg></span>
-					{{pub.Fields.Author_noand}}, <strong>{{pub.Fields.Title}}</strong>, 
+					{{pub.Fields.Author_noand}}, <strong>{{pub.Fields.Title}}</strong>,
 					<span ng-show="pub.Fields.Journal"><em>{{pub.Fields.Journal}}</em>, </span>
 					<span ng-show="pub.Fields.Volume">vol. {{pub.Fields.Volume}}, </span>
 					<span ng-show="pub.Fields.Number">no. {{pub.Fields.Number}}, </span>
 					<span ng-show="pub.Fields.Pages">pp. {{pub.Fields.Pages}}, </span>
-					{{pub.Fields.Year}} 
+					{{pub.Fields.Year}}
                             </span>
                             <!-- format for case: article -->
 			    <span ng-switch-when="article">
 			   		<i class="material-icons">insert_drive_file</i>
 			   		<span ng-show="pub.Fields.Github"> <svg height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"> <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg></span>
-					{{pub.Fields.Author_noand}}, <strong>{{pub.Fields.Title}}</strong>, 
-					<em>{{pub.Fields.Journal}}</em>, 
+					{{pub.Fields.Author_noand}}, <strong>{{pub.Fields.Title}}</strong>,
+					<em>{{pub.Fields.Journal}}</em>,
 					<span ng-show="pub.Fields.Volume">vol. {{pub.Fields.Volume}}, </span>
 					<span ng-show="pub.Fields.Number">no. {{pub.Fields.Number}}, </span>
 					<span ng-show="pub.Fields.Pages">pp. {{pub.Fields.Pages}}, </span>
-					{{pub.Fields.Year}} 
+					{{pub.Fields.Year}}
                             </span>
                             <!-- format for case: inproceedings -->
 			    <span ng-switch-when="inproceedings">
@@ -71,37 +71,38 @@ and <a href="https://www.kth.se/profile/poldap/publications/?l=en"><img src="htt
    			   		<i class="material-icons">book</i>
    			   		<span ng-show="pub.Fields.Github"> <svg height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"> <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg></span>
 					{{pub.Fields.Author_noand}}, <strong>{{pub.Fields.Chapter}}</strong>, in {{pub.Fields.Title}}, pp. {{pub.Fields.Pages}}, {{pub.Fields.Publisher}}, {{pub.Fields.Year}}
-			    </span>	
+			    </span>
 			    <!-- format for case: mastersthesis -->
 			    <span ng-switch-when="mastersthesis">
 			   		<i class="material-icons">book</i>
 			   		<span ng-show="pub.Fields.Github"> <svg height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"> <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg></span>
 					{{pub.Fields.Author_noand}}, <strong>{{pub.Fields.Title}}</strong>, <span ng-if="pub.Fields.Type">{{pub.Fields.Type}}</span><span ng-if="!pub.Fields.Type">Master's thesis</span> at <em>{{pub.Fields.School}}</em>, {{pub.Fields.Year}}
 			    </span>
-			    <!-- format for case: phdthesis -->			    
+			    <!-- format for case: phdthesis -->
 			    <span ng-switch-when="phdthesis">
 			   		<i class="material-icons">book</i>
 					{{pub.Fields.Author_noand}}, <strong>{{pub.Fields.Title}}</strong>, Ph.D. thesis at <em>{{pub.Fields.School}}</em>, {{pub.Fields.Year}}
 			    </span>
-			    <!-- format for case: patent -->			    
+			    <!-- format for case: patent -->
 			    <span ng-switch-when="patent">
 			   		<i class="material-icons">assignment_turned_in</i>
 					{{pub.Fields.Author_noand}}, <strong>{{pub.Fields.Title}}</strong>, {{pub.Fields.Nationality}} <span ng-if="pub.Fields.Type">{{pub.Fields.Type}}</span><span ng-if="!pub.Fields.Type">Patent</span><span ng-show="pub.Fields.Number"> {{pub.Fields.Number}}</span>, {{pub.Fields.Year}}
 			    </span>
 			    <!-- arrow to expand, common to all cases (controlled by showMore variable for each pub) -->
                             <i id="morearrow" class="material-icons color-theme"> {{showMore ? 'arrow_downward' : 'arrow_forward'}} </i> </a>
-			</span>	
-                        
+			</span>
+
                         <!-- Extra info all pubs may have, show only if available. Abstract, DOI link, arXiv link, URL, slides link, and BibTex reference (always) -->
 			<div ng-show="showMore" id="pubhidden">
-				<span ng-show="pub.Fields.Abstract"> 
+				<span ng-show="pub.Fields.Abstract">
                                     <p style="text-align:justify"><strong>Abstract: </strong>
                                     {{pub.Fields.Abstract}} </p>
                                 </span>
 				<div id="pubButtons">
-					<a class="label label-theme" ng-show="pub.Fields.Doi" href="https://doi.org/{{pub.Fields.Doi}}">DOI: {{pub.Fields.Doi}}</a> 
-					<a class="label label-theme" ng-show="pub.Fields.Eprint" href="https://arxiv.org/abs/{{pub.Fields.Eprint}}">arXiv: {{pub.Fields.Eprint}} [{{pub.Fields.Eprintclass}}]</a> 
-					<a class="label label-theme" ng-show="pub.Fields.Url" href="{{pub.Fields.Url}}">PDF</a> 
+					<a class="label label-theme" ng-show="pub.Fields.Doi" href="https://doi.org/{{pub.Fields.Doi}}">DOI: {{pub.Fields.Doi}}</a>
+					<a class="label label-theme" ng-show="pub.Fields.Eprint" href="https://arxiv.org/abs/{{pub.Fields.Eprint}}">arXiv: {{pub.Fields.Eprint}} [{{pub.Fields.Eprintclass}}]</a>
+					<a class="label label-theme" ng-show="pub.Fields.Doi" href="https://sci-hub.se/{{pub.Fields.Doi}}">SCI-HUB</a>
+					<a class="label label-theme" ng-show="pub.Fields.Url" href="{{pub.Fields.Url}}">PDF</a>
 					<a class="label label-theme" ng-show="pub.Fields.Slides" href="{{pub.Fields.Slides}}">Slides</a>
 					<a class="label label-theme" ng-show="pub.Fields.Github" href="https://github.com/{{pub.Fields.Github}}">GitHub</a>
 					<a class="label label-theme" ng-click="open(pub)">BibTeX</a>
