@@ -16,21 +16,20 @@
 %    Abstract = {},
 %}
 
-@unpublished{AguilaPla2022,
-   Title = {Bona fide {R}iesz projections for density estimation},
-   Journal = {Submitted to the 2022 IEEE International Conference on Acoustics,
-   Speech and Signal Processing (ICASSP)},
-   Author = {Pol {del Aguila Pla} and Michael Unser},
+@unpublished{Bohra2022,
+   Title = {A statistical framework to investigate the optimality of neural networks for inverse problems},
+   Journal = {Pre-print},
+   Author = {Pakshal Bohra, Pol {del Aguila Pla}, Jean-François Giovannelli, Michael Unser},
    Year = {2022},
    Month = {},
-   Eprint = {},
-   Eprintclass = {},
+   Eprint = {2203.09920},
+   Eprintclass = {eess.SP},
    Doi = {},
    Url = {},
    Pages = {},
    Volume = {},
    Number = {},
-   Abstract = {The projection of sample measurements onto a reconstruction space represented by a basis on a regular grid is a powerful and simple approach to estimate a probability density function. In this paper, we focus on Riesz bases and propose a projection operator that, in contrast to previous works, guarantees the bona fide properties for the estimate, namely, non-negativity and total probability mass 1. Our bona fide projection is defined as a convex problem. We propose solution techniques and evaluate them. Results suggest an improved performance, specifically in circumstances prone to rippling effects.},
+   Abstract = {We present a statistical framework to benchmark the performance of neural-network-based reconstruction algorithms for linear inverse problems. The underlying signals in our framework are realizations of sparse stochastic processes and are ideally matched to variational sparsity-promoting techniques, some of which can be reinterpreted as their maximum a posteriori (MAP) estimators. We derive Gibbs sampling schemes to compute the minimum mean square error (MMSE) estimators for processes with Laplace, Student's t and Bernoulli-Laplace innovations. These allow our framework to provide quantitative measures of the degree of optimality (in the mean-square-error sense) for any given reconstruction method. We showcase the use of our framework by benchmarking the performance of CNN architectures for deconvolution and Fourier sampling problems. Our experimental results suggest that while these architectures achieve near-optimal results in many settings, their performance deteriorates severely for signals associated with heavy-tailed distributions.},
 }
 
 % Accepted journal papers
@@ -83,6 +82,23 @@
 }
 
 % Accepted conference papers
+@inproceedings{AguilaPla2022,
+   Title = {Bona fide {R}iesz projections for density estimation},
+   Booktitle = {Accepted to the 2022 IEEE International Conference on Acoustics,
+   Speech and Signal Processing (ICASSP)},
+   Author = {Pol {del Aguila Pla} and Michael Unser},
+   Year = {2022},
+   Month = {May},
+   Eprint = {},
+   Eprintclass = {},
+   Doi = {},
+   Url = {},
+   Pages = {},
+   Volume = {},
+   Number = {},
+   Abstract = {The projection of sample measurements onto a reconstruction space represented by a basis on a regular grid is a powerful and simple approach to estimate a probability density function. In this paper, we focus on Riesz bases and propose a projection operator that, in contrast to previous works, guarantees the bona fide properties for the estimate, namely, non-negativity and total probability mass 1. Our bona fide projection is defined as a convex problem. We propose solution techniques and evaluate them. Results suggest an improved performance, specifically in circumstances prone to rippling effects.},
+}
+
 @inproceedings{Denoyelle2021,
     Title = {Optimal-transport-based metric for SMLM},
     Booktitle = {2021 IEEE 18th International Symposium on Biomedical Imaging (ISBI 2021)},
