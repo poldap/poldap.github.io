@@ -7,8 +7,7 @@ table, th, td {
 <ul class="list-group">
   <li class="list-group-item publist_row">
       <span class="list-group-item-text" ng-click="showMoreJung2021 = !showMoreJung2021" >
-          <i class="material-icons">record_voice_over</i><i class="material-icons">duo</i>
-          <i class="material-icons">group_add</i>
+          <i class="material-icons">record_voice_over</i><i class="material-icons">duo</i><i class="material-icons">group_add</i>
           Pol del Aguila Pla, <strong>Remote and interactive image processing programming laboratories with Jupyter, </strong> Aalto University, Finland (Webinar), June 2021
           <i id="morearrow" class="material-icons color-theme">
               {{showMoreJung2021 ? 'arrow_downward' : 'arrow_forward'}}
@@ -28,9 +27,8 @@ table, th, td {
   </li>
   <li class="list-group-item publist_row">
       <span class="list-group-item-text" ng-click="showMoreEMIM20tut = !showMoreEMIM20tut" >
-          <i class="material-icons">record_voice_over</i><!--<i class="material-icons">duo</i>-->
-          <i class="material-icons">group_add</i>
-          Pol del Aguila Pla, <strong> ES 02 - Biomedical imaging as an inverse problem, </strong>
+          <i class="material-icons">record_voice_over</i><i class="material-icons">duo</i><i class="material-icons">group_add</i>
+          Pol del Aguila Pla, <strong>Biomedical imaging as an inverse problem, </strong>
           <em>[EMIM20] , </em> Thessaloniki, Greece (Virtual conference), August 2020
           <i id="morearrow" class="material-icons color-theme">
               {{showMoreEMIM20tut ? 'arrow_downward' : 'arrow_forward'}}
@@ -77,12 +75,31 @@ table, th, td {
 <h3>Talks at international research events</h3>
 <ul class="list-group">
     <li class="list-group-item publist_row">
+        <span class="list-group-item-text" ng-click="showMoreICASSP22 = !showMoreICASSP22" >
+            <i class="material-icons">record_voice_over</i><i class="material-icons">duo</i><i class="material-icons">view_carousel</i>
+            Pol del Aguila Pla, <strong> Bona fide Riesz projections for density estimation, </strong>
+            <em>[ICASSP22] IEEE International Conference on Acoustics, Speech and Signal Processing, </em> Singapore, Singapore, May 2022
+            <i id="morearrow" class="material-icons color-theme">
+                {{showMoreICASSP22 ? 'arrow_downward' : 'arrow_forward'}}
+            </i> </a>
+        </span>
+        <div ng-show="showMoreICASSP22">
+            <p style="text-align:justify"> <strong>Abstract:</strong> The projection of sample measurements onto a reconstruction space represented by a basis on a regular grid is a powerful and simple approach to estimate a probability density function. In this paper, we focus on Riesz bases and propose a projection operator that, in contrast to previous works, guarantees the bona fide properties for the estimate, namely, non-negativity and total probability mass 1. Our bona fide projection is defined as a convex problem. We propose solution techniques and evaluate them. Results suggest an improved performance, specifically in circumstances prone to rippling effects. </p>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/UWTDIy43qoM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div id="pubButtons">
+                <a class="label label-theme" href="https://sigport.org/documents/bona-fide-riesz-projections-density-estimation-presentation">Slides</a>
+                <a class="label label-theme" href="https://sigport.org/documents/bona-fide-riesz-projections-density-estimation-poster">Poster</a>
+            </div>
+        </div>
+    </li>
+    <li class="list-group-item publist_row">
         <span class="list-group-item-text" ng-click="showMoreICASSP20 = !showMoreICASSP20" >
             <i class="material-icons">record_voice_over</i><i class="material-icons">duo</i>
             Pol del Aguila Pla, <strong> Clock synchronization over networks using sawtooth models, </strong>
             <em>[ICASSP20] IEEE International Conference on Acoustics, Speech and Signal Processing, </em> Barcelona, Catalonia (Virtual conference), May 2020
             <i id="morearrow" class="material-icons color-theme">
-                {{showMoreISCASSP20 ? 'arrow_downward' : 'arrow_forward'}}
+                {{showMoreICASSP20 ? 'arrow_downward' : 'arrow_forward'}}
             </i> </a>
         </span>
         <div ng-show="showMoreICASSP20">
