@@ -1,6 +1,15 @@
 % MSc Theses in progress
 
 % Finished MSc Theses
+@mastersthesis{Laechler2022,
+	Author = {Kay Lächler},
+	School = {École polytechnique fédérale de Lausanne (EPFL), Lausanne, Switzerland},
+	Title = {Advanced machine learning for single-acquisition isotropic fetal MRI},
+	Year = {2022},
+	Url = {data/pubs/laechler2022.pdf},
+	Abstract = {Magnetic resonance imaging (MRI) of the 3D structure of the foetal brain as it develops inside the womb provides a high-resolution view of the brain's development. The resulting accuracy is well beyond that achieved by ultrasound imaging, informs critical clinical diagnosis and prognosis, and opens a path towards in-vivo quantitative studies. The capture of these MRI data, however, is challenging to achieve. To mitigate imaging artifacts due to both fetal and mother motion, the MRI sequences have to be fast, and resolution is typically compromised in one of the three axes. This is usually compensated by acquiring separate stacks in which the low-resolution axis is alternated and blending the data using super-resolution techniques. In this project, we aim to incorporate advances from deep neural networks and sparse representations to obtain the best isotropic resolution possible from a single MRI acquisition. These techniques leverage that the expected textures and patterns in an image are no different in the low-resolution dimension than they are in the high-resolution ones. Similar techiques have been previously applied to bio-imaging modalities where one of the three dimensions is also acquired at a lower resolution.},
+}
+
 @mastersthesis{Anguera2019,
 	Author = {Jaume Anguera Peris},
 	School = {KTH Royal Institute of Technology, Stockholm, Sweden},
@@ -19,13 +28,14 @@
 	Abstract = {Sleep staging is the use of electrophysiological signals to determine the quality and architecture of sleep in an animal. Currently, to achieve this, researchers manually classify contiguous sections of electroencephalographic and electromyographic signals into defined sleep modes or stages. This is a slow and laborious process. Many attempts at semi-automated solutions can be found in the literature. In these attempts, a researcher manually classifies a portion of the data from a specific rodent. This data is used to train a model which can then be used to classify the rest of the data from that rodent. While such solutions can be found in commercial products, they still require hours of manual classification to be done by the researcher. In this thesis, I explore two machine learning methods in an attempt to fully automate the process of sleep staging. The automation consists of building a classifier that can classify data from a new rodent, using only manually classified data from previous rodents. This classifier should classify this new rodent’s data at a sufficiently high accuracy. While there have also been attempts at such a system in the past, none of them have reached a level of accuracy that is acceptable for use. The two methods implemented in this thesis are support vector machines (SVM) and convolution neural networks (CNN). The results obtained are promising, with the results from SVM being on the cusp of real world usability for automated sleep staging.},
 }
 
+% Finished semester projects and BSc Theses
 @thesis{Nogueron2021,
 	Author = {Alejandro Noguerón Aramburu},
 	School = {École polytechnique fédérale de Lausanne (EPFL), Lausanne, Switzerland},
 	Title = {Proximal operators for nonnegative inverse problems},
 	Year = {2021},
 	Type = {Semester Project},
-	Url = {data/pubs/nogueron2020.pdf},
+	Url = {data/pubs/nogueron2021.pdf},
 	Abstract = {Reconstruction algorithms based on proximal optimization are critical to many imaging systems across science and medicine. Identifying strategies to reduce their computational demands is therefore of utmost importance. In our previous work, we identified that some common image regularizers admit proximal operators that combine well with nonnegativity constraints, enabling reduced splitting and thereby cheaper and faster computations. The goal of this project is to empirically explore other common regularizers and their proximal operators in order to discover more cases in which performance can be improved. Depending on the evolution of the project and the preferences of the student, there is an option to delve on the underlying theory.}
 	}
 
