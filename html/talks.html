@@ -207,3 +207,69 @@ table, th, td {
         </div>
     </li>
 </ul>
+
+<h3>Other seminars</h3>
+<ul class="list-group">
+  <li class="list-group-item publist_row">
+      <span class="list-group-item-text" ng-click="showMoreCIBMBS2022 = !showMoreCIBMBS2022" >
+          <i class="material-icons">record_voice_over</i><i class="material-icons">duo</i>
+          Pol del Aguila Pla, <strong>Stability of image-reconstruction algorithms, </strong> CIBM Breakfast and Science, March 29, 2022
+          <i id="morearrow" class="material-icons color-theme">
+              {{showMoreCIBMBS2022 ? 'arrow_downward' : 'arrow_forward'}}
+          </i> </a>
+      </span>
+      <div ng-show="showMoreCIBMBS2022">
+          <p style="text-align:justify"> <strong>Abstract:</strong> Algorithms to solve inverse problems are at the core of imaging, wheere they are known
+            as image reconstruction methods. These methods recover the desired images from the indirect measurements provided by physical measurement devices
+            such as PET, MRI or EEG systems. Medical imaging critically depends on the guarantees these methods provide to inform diagnostic and treatment decisions.
+            Of specific relevance is how stable they are--how much the recovered image changes when the measurements change slightly. In this talk, I will first
+            briefly present a unified understanding of the history of image reconstruction. Then, I will clearly lay out the stability guarantees
+            provided by different modern image reconstruction methos, focusing on our own work on the stability of Lp-regularization strategies.
+        </br></br>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/FGftLTQbY7E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div id="pubButtons">
+              <a class="label label-theme" href="data/talks/20220329_CIBMBS_2x2.pdf">Slides</a>
+          </div>
+      </div>
+  </li>
+  <li class="list-group-item publist_row">
+      <span class="list-group-item-text" ng-click="showMoreEPFLJupyter2021 = !showMoreEPFLJupyter2021" >
+          <i class="material-icons">record_voice_over</i><i class="material-icons">duo</i>
+          Pol del Aguila Pla, <strong>Remote practical labs with personalised automated feedback, </strong> EPFL Jupyter Community Event, EPFL Center for Digital Education (CEDE), Dec 13, 2021
+          <i id="morearrow" class="material-icons color-theme">
+              {{showMoreEPFLJupyter2021 ? 'arrow_downward' : 'arrow_forward'}}
+          </i> </a>
+      </span>
+      <div ng-show="showMoreEPFLJupyter2021">
+          <p style="text-align:justify"> 
+        </br></br>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/dfWmzFV7ZcA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div id="pubButtons">
+              <a class="label label-theme" href="data/talks/EPFLJupyter2021_2x2.pdf">Slides</a>
+          </div>
+      </div>
+  </li>
+  <li class="list-group-item publist_row">
+      <span class="list-group-item-text" ng-click="showMoreCIBMBS2020 = !showMoreCIBMBS2020" >
+          <i class="material-icons">record_voice_over</i><i class="material-icons">duo</i>
+          Pol del Aguila Pla, <strong>GlobalBioIm: Imaging as an Inverse Problem Made Easy, </strong> CIBM Breakfast and Science, May 26, 2020
+          <i id="morearrow" class="material-icons color-theme">
+              {{showMoreCIBMBS2020 ? 'arrow_downward' : 'arrow_forward'}}
+          </i> </a>
+      </span>
+      <div ng-show="showMoreCIBMBS2020">
+          <p style="text-align:justify"> <strong>Abstract:</strong> Most image reconstruction methods across biomedical imaging rely on
+            the successful formalism of imaging as an inverse problem. In this framework, and imaging system is represented as a transformation
+            of a continuous quantity (e.g., a density of fluorophores over a certain plane or volume) into a number of measurements. Image
+            reconstruction is then understood as the recovery of the original continuous quantity. The successful design of reconstruction methods
+            following this paradigm involves both advanced mathematics to reliably incorporate prior knowledge and major efforts to develop
+            efficient algorithms. In this talk, I explain the basic concepts of the field and show how our library "GlobalBioIm" can facilitate
+            your research, with a couple of running examples to showcase its different functionalities.
+        </br></br>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/IUHr0nVJ_H0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div id="pubButtons">
+              <a class="label label-theme" href="data/talks/20200526_CIBMBS_2x2.pdf">Slides</a>
+          </div>
+      </div>
+  </li>
+</ul>
