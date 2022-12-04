@@ -7,7 +7,7 @@
   </div>
   <!--- Name and short description --->
   <div class="col-sm-9 col-xs-12">
-    <h2>Pol del Aguila Pla <small>Ph.D. <small><a class="label label-theme" 
+    <h2>Pol del Aguila Pla <small>Ph.D. <small><a class="label label-theme"
 href="data/cv/cv.pdf">PDF CV</a></small> </small></h2>
     <p style="text-align:justify">
         I am a research staff scientist in mathematical imaging at the
@@ -107,10 +107,13 @@ calling my Swedish phone number
 <a href="tel://+46729429302">+46 7 294 293 02</a>,
 or by spontaneously joining my Zoom room.
 <br /> <br />
-<form action="https://api.telegram.org/bot5583184369:AAE0yP80-XRLTdwQWP3yxPsZEwg10jpUtMM/sendMessage" target="_blank">
+<form method="POST"
+action="https://api.telegram.org/bot5583184369:AAE0yP80-XRLTdwQWP3yxPsZEwg10jpUtMM/sendMessage"
+target="hiddenifrm" onsubmit="if(confirm('Send message below?\n' + document.getElementById('message').value)){alert('Message sent');return true;}else{return false;}">
     <input type="hidden" name="chat_id" value="-1001684736592">
     <p>Or, just message me here. Remember to let me know how
        to get back to you, though!<br> <br>
-    <input type="text" name="text" size=60 value="Pol, I'm me, this is my message. Get back to me at email@domain. Cheers."><br>
+    <input type="text" name="text" id="message" size=60 value="Pol, I'm me, this is my message. Get back to me at email@domain. Cheers."><br>
     <input type="submit" value="Send message">
 </form>
+<iframe id="hiddenifrm" name="hiddenifrm" style="display:none"></iframe>
