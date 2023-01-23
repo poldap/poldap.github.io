@@ -1,12 +1,40 @@
-% MSc Theses in progress
+% Ongoing projects
+@mastersthesis{Scheidegger2023,
+	Author = {Timo Scheidegger},
+	School = {École polytechnique fédérale de Lausanne (EPFL), Lausanne, Switzerland},
+	Title = {High-speed imaging with any camera},
+	Year = {2023 (Ongoing)},
+	Url = {},
+	Abstract = {High speed imaging can be achieved with any camera, as has recently been demonstrated with the Virtual Frame Technique. Using this method, any monotonic phenomenon that is imaged instantaneously with perfect contrast (such that the image is binary) can be recorded at high rates by increasing the exposure time of the camera. Thus, complex temporal dynamics can be recorded at high rates and high resolution, averting the traditional trade-off between size of the region of interest and imaging rate. In this project we explore the limits of this method, using a dual-approach of experimental demonstration and theoretical analysis. Project in collaboration with Engineering Mechanics of Soft Interfaces (EMSI) laboratory.},
+}
+
+@thesis{Halstensen2023,
+	Author = {Simon Halstensen},
+	School = {École polytechnique fédérale de Lausanne (EPFL), Lausanne, Switzerland},
+	Title = {Advanced machine learning for probability density estimation},
+	Year = {2023 (Ongoing)},
+	Type = {Semester Project},
+	Url = {},
+	Abstract = {Probability density function (pdf) estimation is a long-standing and fundamental problem in statistics. Most tasks in machine learning, including classification and regression, become much easier with a good density estimate. Pdf estimation aims to characterise the continuous distribution underlying a random set of samples. Here at BIG and CIBM there is an ongoing effort to find the best technique to this end. Applications include positron emission tomography (PET) imaging and scanning transmission x-ray microscopy (STXM). In this project, we will explore the limits of advanced machine learning techniques (e.g., complex deep-neural-network architectures such as real NVP or spline interpolations) for pdf estimation. We will focus on understanding the fundamentals behind these methods and assess their advantages and limitations for different applications. The student should be comfortable with probability and statistics and familiar with the PyTorch framework. Prior experience with signal processing or machine learning research is a definite plus.}
+}
+
+@thesis{Liu2023,
+	Author = {Guanqun Liu},
+	School = {École polytechnique fédérale de Lausanne (EPFL), Lausanne, Switzerland},
+	Title = {Deep neural networks to reconstruct super-resolution {MRI} for liver and kidney {3D} modeling},
+	Year = {2023 (Ongoing)},
+	Type = {Semester Project},
+	Url = {},
+	Abstract = {When a patient is diagnosed with liver or kidney disease requiring an organ transplant, magnetic resonance imaging (MRI) is increasingly used to create a 3D representation of the relevant organ for 3D printing. Doctors then use this model to compare the patient’s organ with that of the donor, plan the operation, train the team, and inform the patient. These MRIs are acquired in short sessions to prevent distortion due to patient motion. However, due to scanning speed, the resolution of the resulting MRI data tends to be significantly lower in one of the axes, compromising the validity of the procedure and thus the outcome of the operation. The project aims to reconstruct MRI scans with high resolution in every axis via deep neural networks, extract accurate 3D organ models from liver and kidney MRI data using state-of-the-art segmentation techniques, and deploy the resulting workflow into a clinically relevant environment.}
+}
 
 % Finished MSc Theses
 @mastersthesis{Laechler2022,
 	Author = {Kay Lächler},
 	School = {École polytechnique fédérale de Lausanne (EPFL), Lausanne, Switzerland},
-	Title = {Advanced machine learning for single-acquisition isotropic fetal MRI},
+	Title = {Advanced machine learning for single-acquisition isotropic fetal {MRI}},
 	Year = {2022},
-	Url = {data/pubs/laechler2022.pdf},
+	Url = {https://poldap.github.io/data/pubs/laechler2022.pdf},
 	Abstract = {Magnetic resonance imaging (MRI) of the 3D structure of the foetal brain as it develops inside the womb provides a high-resolution view of the brain's development. The resulting accuracy is well beyond that achieved by ultrasound imaging, informs critical clinical diagnosis and prognosis, and opens a path towards in-vivo quantitative studies. The capture of these MRI data, however, is challenging to achieve. To mitigate imaging artifacts due to both fetal and mother motion, the MRI sequences have to be fast, and resolution is typically compromised in one of the three axes. This is usually compensated by acquiring separate stacks in which the low-resolution axis is alternated and blending the data using super-resolution techniques. In this project, we aim to incorporate advances from deep neural networks and sparse representations to obtain the best isotropic resolution possible from a single MRI acquisition. These techniques leverage that the expected textures and patterns in an image are no different in the low-resolution dimension than they are in the high-resolution ones. Similar techiques have been previously applied to bio-imaging modalities where one of the three dimensions is also acquired at a lower resolution.},
 }
 
@@ -29,13 +57,24 @@
 }
 
 % Finished semester projects and BSc Theses
+
+@thesis{Hilsberg2022,
+	Author = {Hendrik Hilsberg},
+	School = {École polytechnique fédérale de Lausanne (EPFL), Lausanne, Switzerland},
+	Title = {Deep neural networks to reconstruct super-resolution {MRI} for {3D} modeling},
+	Year = {2022},
+	Type = {Semester Project},
+	Url = {},
+	Abstract = {The goal of this project is to use neural networks to reconstruct high resolution magnetic resonance imaging (MRI) scans of organs in three dimensions, in order to create an accurate 3D representation for use in a standalone C++ 3D CAD environment. This is particularly useful when a patient needs an organ transplant, as it allows doctors to compare the patient’s organ to the donor’s and plan the operation accordingly. However, in order to minimize distortion caused by patient movement during the MRI scan, it is necessary to keep the acquisition time short. This can result in low resolution in one axis, which can compromise the accuracy of the procedure and ultimately the success of the operation. The neural network architecture was originally developed using liver and kidney MRI scans, but this project mainly focuses on reconstructing prostate scans.},
+}
+
 @thesis{Nogueron2021,
 	Author = {Alejandro Noguerón Aramburu},
 	School = {École polytechnique fédérale de Lausanne (EPFL), Lausanne, Switzerland},
 	Title = {Proximal operators for nonnegative inverse problems},
 	Year = {2021},
 	Type = {Semester Project},
-	Url = {data/pubs/nogueron2021.pdf},
+	Url = {https://poldap.github.io/data/pubs/nogueron2021.pdf},
 	Abstract = {Reconstruction algorithms based on proximal optimization are critical to many imaging systems across science and medicine. Identifying strategies to reduce their computational demands is therefore of utmost importance. In our previous work, we identified that some common image regularizers admit proximal operators that combine well with nonnegativity constraints, enabling reduced splitting and thereby cheaper and faster computations. The goal of this project is to empirically explore other common regularizers and their proximal operators in order to discover more cases in which performance can be improved. Depending on the evolution of the project and the preferences of the student, there is an option to delve on the underlying theory.}
 	}
 
@@ -73,7 +112,7 @@
 @thesis{F3A2018,
 	Author = {Lovisa Colérus and Karla Rehn},
 	School = {KTH Royal Institute of Technology, Stockholm, Sweden},
-	Title = {Automatic sleep scoring using {K}eras [{P}roject: {M}achine learning for sleep scoring]},
+	Title = {Automatic sleep scoring using {K}eras },
 	Year = {2018},
 	Type = {Bachelor's Thesis},
 	Url = {http://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-230905},
@@ -83,7 +122,7 @@
 @thesis{F3B2018,
 	Author = {Josef Malmström and Najib Yavari},
 	School = {KTH Royal Institute of Technology, Stockholm, Sweden},
-	Title = {Power spectral density based sleep scoring using artificial neural networks [{P}roject: {M}achine learning for sleep scoring]},
+	Title = {Power spectral density based sleep scoring using artificial neural networks },
 	Year = {2018},
 	Type = {Bachelor's Thesis},
 	Url = {http://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-239371},
@@ -93,7 +132,7 @@
 @thesis{F3C2018,
 	Author = {David Ekvall and Rebecka Winqvist},
 	School = {KTH Royal Institute of Technology, Stockholm, Sweden},
-	Title = {Machine learning for sleep scoring [{P}roject: {M}achine learning for sleep scoring]},
+	Title = {Machine learning for sleep scoring },
 	Year = {2018},
 	Type = {Bachelor's Thesis},
 	Url = {http://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-239372},
@@ -103,7 +142,7 @@
 @thesis{F2A2018,
 	Author = {Gabriel Bengtsson and Jesper Larsson},
 	School = {KTH Royal Institute of Technology, Stockholm, Sweden},
-	Title = {Source localization by inverse diffusion and convex optimization [{P}roject: {L}arge scale optimization on a {GPU}]},
+	Title = {Source localization by inverse diffusion and convex optimization},
 	Year = {2018},
 	Type = {Bachelor's Thesis},
 	Url = {http://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-230738},
@@ -113,7 +152,7 @@
 @thesis{F2B2018,
 	Author = {Johan Sörell and Elias Ågeby},
 	School = {KTH Royal Institute of Technology, Stockholm, Sweden},
-	Title = {Inverse diffusion by proximal optimization with {TensorFlow} [{P}roject: {L}arge scale optimization on a {GPU}]},
+	Title = {Inverse diffusion by proximal optimization with {TensorFlow}},
 	Year = {2018},
 	Type = {Bachelor's Thesis},
 	Abstract = {We present a method for implementing a large scale, proximal optimization algorithm in a machine learning framework to solve an inverse problem. The algorithm is based on a previously developed method for analyzing data of some image-based immunoassays in the context of detecting diffused cells. By employing TensorFlow through it’s Python API, parallelized computations on graphical processing units, distributed processing, automatic gradient computation and computational efficiency are made available for implementation. Image processing methods are also utilized throughout the implementation, resulting in a F1-score of 0.91. The performance matches previous implementations of the algorithm presented, leading to the conclusion that the TensorFlow platform is well suited and provides advantages over traditional methods. We conclude that the method presented coupled with the resulting performance is a proof of concept, by providing an example of implementing convex optimization in a machine learning framework.},

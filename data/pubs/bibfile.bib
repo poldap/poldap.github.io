@@ -3,7 +3,7 @@
 @unpublished{Bohra2022,
    Title = {A statistical framework to investigate the optimality of signal-reconstruction methods},
    Journal = {Under review at the IEEE Transactions on Signal Processing},
-   Author = {Pakshal Bohra, Pol {del Aguila Pla}, Jean-François Giovannelli, Michael Unser},
+   Author = {Pakshal Bohra and Pol {del Aguila Pla} and Jean-François Giovannelli and Michael Unser},
    Year = {2022},
    Month = {},
    Eprint = {2203.09920},
@@ -104,13 +104,13 @@
    Eprint = {2211.06502},
    Eprintclass = {eess.IV},
    %Doi = {},
-   Url = {},
+   Url = {https://arxiv.org/abs/2211.06502},
    Pages = {},
    Abstract = {Superresolution T2-weighted fetal-brain magnetic-resonance imaging (FBMRI) traditionally relies on the availability of several orthogonal low-resolution series of 2-dimensional thick slices (volumes). In practice, only a few low-resolution volumes are acquired. Thus, optimization-based image-reconstruction methods require strong regularization using hand-crafted regularizers (e.g., TV). Yet, due to in utero fetal motion and the rapidly changing fetal brain anatomy, the acquisition of the high-resolution images that are required to train supervised learning methods is difficult. In this paper, we sidestep this difficulty by providing a proof of concept of a self-supervised single-volume superresolution framework for T2-weighted FBMRI (SAIR). We validate SAIR quantitatively in a motion-free simulated environment. Our results for different noise levels and resolution ratios suggest that SAIR is comparable to multiple-volume superresolution reconstruction methods. We also evaluate SAIR qualitatively on clinical FBMRI data. The results suggest SAIR could be incorporated into current reconstruction pipelines.},
 }
 
 @inproceedings{Boquet2023,
-   Title = {PET rebinning with regularized density splines},
+   Title = {{PET} rebinning with regularized density splines},
    Booktitle = {2023 IEEE 20th International Symposium on Biomedical Imaging (Accepted in ISBI 2023)},
    Author = {Aleix Boquet-Pujadas and Pol {del Aguila Pla} and Michael Unser},
    Year = {2023},
@@ -136,13 +136,13 @@
    Eprintclass = {eess.SP},
    Github = {poldap/rpde},
    Doi = {10.1109/ICASSP43922.2022.9746780},
-   Url = {},
+   Url = {http://bigwww.epfl.ch/publications/delaguilapla2201.html},
    Pages = {5613–5616},
    Abstract = {The projection of sample measurements onto a reconstruction space represented by a basis on a regular grid is a powerful and simple approach to estimate a probability density function. In this paper, we focus on Riesz bases and propose a projection operator that, in contrast to previous works, guarantees the bona fide properties for the estimate, namely, non-negativity and total probability mass 1. Our bona fide projection is defined as a convex problem. We propose solution techniques and evaluate them. Results suggest an improved performance, specifically in circumstances prone to rippling effects.},
 }
 
 @inproceedings{Denoyelle2021,
-    Title = {Optimal-transport-based metric for SMLM},
+    Title = {Optimal-transport-based metric for {SMLM}},
     Booktitle = {2021 IEEE 18th International Symposium on Biomedical Imaging (ISBI 2021)},
     Author = {Quentin Denoyelle and Thanh-an Pham and Pol {del Aguila Pla} and Daniel Sage and Michael Unser},
     Year = {2021},
@@ -174,7 +174,7 @@
 @inproceedings{AguilaPla2019,
     Author = {Pol {del Aguila Pla} and Vidit Saxena and Joakim Jald\'{e}n},
     Booktitle = {2019 IEEE 16th International Symposium on Biomedical Imaging (ISBI 2019)},
-    Title = {SpotNet – {L}earned iterations for cell detection in image-based immunoassays},
+    Title = {Spot{N}et – {L}earned iterations for cell detection in image-based immunoassays},
     Year = {2019},
     Month = {April},
     Pages = {1023–1027},
@@ -182,7 +182,7 @@
     Eprint = {1810.06132},
     Eprintclass = {eess.IV},
     Github = {poldap/SpotNet},
-    Url = {https://arxiv.org/abs/1810.06132},
+    Url = {http://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-250464},
     Abstract = {Accurate cell detection and counting in the image-based ELISpot and FluoroSpot immunoassays is a challenging task. Methodology recently proposed by our group matches human accuracy by leveraging knowledge of the underlying physical process of these assays and using state-of-the-art iterative techniques to solve an inverse problem. Nonetheless, thousands of computationally expensive iterations are often needed to reach a near-optimal solution. In this paper, we exploit the structure of the iterations to design a parameterized computation graph, \emph{SpotNet}, that learns the characteristic patterns embedded within several training images and their respective cell secretion information. Further, we compare SpotNet to a customized convolutional neural network layout for cell detection based on recent advances. We show empirical evidence that, while both designs obtain a detection performance far beyond that of a human expert, SpotNet is substantially easier to train and obtains better estimates of cell secretion.},
 }
 
