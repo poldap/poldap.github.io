@@ -32,11 +32,14 @@
   Abstract = {As the domain of statistical problems grows multidimensional, samples become sparser and are detected with more heterogeneous sensitivities. This is the regime of more and more imaging modalities with low photon counts. We formulate a proximable optimization problem to estimate probability densities in this context. It considers sensitivity as the probability function of a measure and is built on a basis of B-splines for computational speed and flexible boundary conditions. We choose to regularize the Hessian of the underlying spline via the nuclear norm to promote sparsity. As a result, the method is spatially adaptive and stable against the choice of the regularization parameter, which plays the role of the bandwidth. We provide software and test it on standard densities and on a new approach to PET rebinning.},
 }
 
-@unpublished{Bohra2022,
+
+
+% Accepted journal papers
+@article{Bohra2023,
    Title = {A statistical framework to investigate the optimality of signal-reconstruction methods},
-   Journal = {Under review at the IEEE Transactions on Signal Processing},
+   Journal = {Accepted at the IEEE Transactions on Signal Processing},
    Author = {Pakshal Bohra and Pol {del Aguila Pla} and Jean-François Giovannelli and Michael Unser},
-   Year = {2022},
+   Year = {2023},
    Month = {},
    Eprint = {2203.09920},
    Eprintclass = {eess.SP},
@@ -48,7 +51,6 @@
    Abstract = {We present a statistical framework to benchmark the performance of reconstruction algorithms for linear inverse problems, in particular, neural-network-based methods that require large quantities of training data. We generate synthetic signals as realizations of sparse stochastic processes, which makes them ideally matched to variational sparsity-promoting techniques. We derive Gibbs sampling schemes to compute the minimum mean-square error estimators for processes with Laplace, Student's t, and Bernoulli-Laplace innovations. These allow our framework to provide quantitative measures of the degree of optimality (in the mean-square-error sense) for any given reconstruction method. We showcase our framework by benchmarking the performance of some well-known variational methods and convolutional neural network architectures that perform direct nonlinear reconstructions in the context of deconvolution and Fourier sampling. Our experimental results support the understanding that, while these neural networks outperform the variational methods and achieve near-optimal results in many settings, their performance deteriorates severely for signals associated with heavy-tailed distributions.},
 }
 
-% Accepted journal papers
 @article{AguilaPla2023,
    Title = {Stability of image-reconstruction algorithms},
     Journal = {IEEE Transactions on Computational Imaging},
@@ -129,7 +131,7 @@
 
 @inproceedings{Laechler2023,
    Title = {Self-supervised isotropic superresolution fetal brain {MRI}},
-   Booktitle = {2023 IEEE 20th International Symposium on Biomedical Imaging (Accepted in ISBI 2023)},
+   Booktitle = {2023 IEEE 20th International Symposium on Biomedical Imaging (ISBI 2023)},
    Author = {Kay Lächler and Hélène Lajous and Michael Unser and Meritxell {Bach Cuadra} and Pol {del Aguila Pla}},
    Year = {2023},
    Month = {},
@@ -143,7 +145,7 @@
 
 @inproceedings{Boquet2023,
    Title = {{PET} rebinning with regularized density splines},
-   Booktitle = {2023 IEEE 20th International Symposium on Biomedical Imaging (Accepted in ISBI 2023)},
+   Booktitle = {2023 IEEE 20th International Symposium on Biomedical Imaging (ISBI 2023)},
    Author = {Aleix Boquet-Pujadas and Pol {del Aguila Pla} and Michael Unser},
    Year = {2023},
    Month = {},
