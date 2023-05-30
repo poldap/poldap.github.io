@@ -75,6 +75,42 @@ table, th, td {
 <h3>Talks at international research events</h3>
 <ul class="list-group">
     <li class="list-group-item publist_row">
+        <span class="list-group-item-text" ng-click="showMoreICASSP23b = !showMoreICASSP23b" >
+            <i class="material-icons">duo</i><i class="material-icons">view_carousel</i>
+            Pol del Aguila Pla, <strong> Stability of image-reconstruction algorithms, </strong>
+            <em>[ICASSP23] IEEE International Conference on Acoustics, Speech and Signal Processing, </em> Rhodes, Greece, June 2023
+            <i id="morearrow" class="material-icons color-theme">
+                {{showMoreICASSP23b ? 'arrow_downward' : 'arrow_forward'}}
+            </i> </a>
+        </span>
+        <div ng-show="showMoreICASSP23b">
+            <p style="text-align:justify"> <strong>Abstract:</strong> Robustness and stability of image-reconstruction algorithms have recently come under scrutiny. Their importance to medical imaging cannot be overstated. We review the known results for the topical variational regularization strategies (ℓ₂ and ℓ₁ regularization) and present novel stability results for ℓₚ-regularized linear inverse problems for p∈(1,∞). Our results guarantee Lipschitz continuity for small p and Hölder continuity for larger p. They generalize well to the Lₚ(Ω) function spaces. </p>
+
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/QFy5PzNBPgw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div id="pubButtons">
+                <a class="label label-theme" href="https://go.epfl.ch/StableImagRec-poster">Poster</a>
+            </div>
+        </div>
+    </li>
+    <li class="list-group-item publist_row">
+        <span class="list-group-item-text" ng-click="showMoreICASSP23a = !showMoreICASSP23a" >
+            <i class="material-icons">duo</i><i class="material-icons">view_carousel</i>
+            Pol del Aguila Pla, <strong> Convex quantization preserves logconcavity, </strong>
+            <em>[ICASSP23] IEEE International Conference on Acoustics, Speech and Signal Processing, </em> Rhodes, Greece, June 2023
+            <i id="morearrow" class="material-icons color-theme">
+                {{showMoreICASSP23a ? 'arrow_downward' : 'arrow_forward'}}
+            </i> </a>
+        </span>
+        <div ng-show="showMoreICASSP23a">
+            <p style="text-align:justify"> <strong>Abstract:</strong> A logconcave likelihood is as important to proper statistical inference as a convex cost function is important to variational optimization. Quantization is often disregarded when writing likelihood models, ignoring the limitations of the physical detectors used to collect the data. These two facts call for the question: would including quantization in likelihood models preclude logconcavity? are the true data likelihoods logconcave? We provide a general proof that the same simple assumption that leads to logconcave continuous-data likelihoods also leads to logconcave quantized-data likelihoods, provided that convex quantization regions are used. </p>
+
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Hr2EmNlMJOc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div id="pubButtons">
+                <a class="label label-theme" href="https://go.epfl.ch/QML-poster">Poster</a>
+            </div>
+        </div>
+    </li>
+    <li class="list-group-item publist_row">
         <span class="list-group-item-text" ng-click="showMoreICASSP22 = !showMoreICASSP22" >
             <i class="material-icons">record_voice_over</i><i class="material-icons">duo</i><i class="material-icons">view_carousel</i>
             Pol del Aguila Pla, <strong> Bona fide Riesz projections for density estimation, </strong>
@@ -241,7 +277,7 @@ table, th, td {
           </i> </a>
       </span>
       <div ng-show="showMoreEPFLJupyter2021">
-          <p style="text-align:justify"> 
+          <p style="text-align:justify">
         </br></br>
           <iframe width="560" height="315" src="https://www.youtube.com/embed/dfWmzFV7ZcA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <div id="pubButtons">
