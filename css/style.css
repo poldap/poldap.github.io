@@ -9,13 +9,15 @@ body {
 /* Set various colors */
 .color-theme {
   /*color: #428bca;*/
-  color: #ea3323;
+  /*color: #ea3323;*/
+  color: #0005ff;
 }
 
 /* Set link colors */
 a:link, a:visited, a:hover {
     /*color: #428bca;*/
-    color: #ea3323;
+    /*color: #ea3323;*/
+    color: #0005ff;
     cursor: auto;
 }
 
@@ -23,13 +25,15 @@ a:link, a:visited, a:hover {
 a.label-theme {
   color: white;
   /*background-color: #428bca;*/
-  background-color: #ea3323;
+  /*color: #ea3323;*/
+  color: #0005ff;
 }
 
 .btn-theme {
   color: white;
   /*background-color: #428bca;*/
-  background-color: #ea3323;
+  /*color: #ea3323;*/
+  color: #0005ff;
 }
 
 .container-fluid {
