@@ -15,26 +15,23 @@
   Number = {},
   Abstract = {PET scanners use scintillation crystals to stop high-energy photons. These are then detected via photo-multipliers. Here, we investigate the possibility of stacking circuit boards of silicon pixels in place of both crystals and detectors. The resulting paradigm allows for pitch sizes as small as 100μm and greatly mitigates depth-of-interaction problems.We develop theory for the sensitivity and resolution of the scanners to optimize their design. The insight is complemented by Geant4 simulations and reconstructions thereof. Experiments and theory alike confirm that this paradigm has the potential to help PET break into the microscopic scale. The volumetric resolution is two orders of magnitude better than that of the state-of-the-art. A scanner is now under construction.},
 }
-
-@unpublished{Boquet2023a,
+% Accepted journal papers
+@article{Boquet2024,
   Title = {Sensitivity-aware density estimation in multiple dimensions},
-  Journal = {Under review at the IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  Journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
   Author = {Aleix Boquet-Pujadas and Pol {del Aguila Pla} and Michael Unser},
-  Year = {2023},
+  Year = {2024},
   Month = {},
   Eprint = {},
   Eprintclass = {},
-  Doi = {},
+  Doi = {10.1109/TPAMI.2024.3388370},
   Url = {},
   Pages = {},
   Volume = {},
   Number = {},
-  Abstract = {As the domain of statistical problems grows multidimensional, samples become sparser and are detected with more heterogeneous sensitivities. This is the regime of more and more imaging modalities with low photon counts. We formulate a proximable optimization problem to estimate probability densities in this context. It considers sensitivity as the probability function of a measure and is built on a basis of B-splines for computational speed and flexible boundary conditions. We choose to regularize the Hessian of the underlying spline via the nuclear norm to promote sparsity. As a result, the method is spatially adaptive and stable against the choice of the regularization parameter, which plays the role of the bandwidth. We provide software and test it on standard densities and on a new approach to PET rebinning.},
+  Abstract = {We formulate an optimization problem to estimate probability densities in the context of multidimensional problems that are sampled with uneven probability. It considers detector sensitivity as an heterogeneous density and takes advantage of the computational speed and flexible boundary conditions offered by splines on a grid. We choose to regularize the Hessian of the spline via the nuclear norm to promote sparsity. As a result, the method is spatially adaptive and stable against the choice of the regularization parameter, which plays the role of the bandwidth. We test our computational pipeline on standard densities and provide software.We also present a new approach to PET rebinning as an application of our framework.},
 }
 
-
-
-% Accepted journal papers
 @article{Bohra2023,
    Title = {A statistical framework to investigate the optimality of signal-reconstruction methods},
    Journal = {IEEE Transactions on Signal Processing},
