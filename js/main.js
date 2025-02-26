@@ -5,6 +5,9 @@ angular.module('acadApp', ['ngRoute', 'ui.bootstrap', 'ngResource'])
     .when('/', {
       templateUrl:'html/main.html'
     })
+    .when('/marimo', {
+      templateUrl:'html/marimo.html'
+    })
     .when('/pubs', {
       controller:'PubsCtrl',
       templateUrl:'html/pubs.html'
