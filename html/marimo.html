@@ -1,6 +1,9 @@
-<iframe
-  src="https://marimo.app/l/aojjhb?embed=true&show-chrome=true"
-  width="100%"
-  height="800"
-  frameborder="0"
-></iframe>
+<div ng-controller="IframeController">
+  <label for="siteSelector">Load from collection:</label>
+  <select id="siteSelector" ng-model="selectedSite" ng-change="updateIframe()">
+      <option ng-repeat="site in sites" value="{{site.url}}">{{site.name}}</option>
+  </select>
+
+  <iframe id="embeddedSite" ng-src="{{trustedSrc}}" width="95%" height="800" frameborder="0"></iframe>
+</div>
+

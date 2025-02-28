@@ -6,6 +6,7 @@ angular.module('acadApp', ['ngRoute', 'ui.bootstrap', 'ngResource'])
       templateUrl:'html/main.html'
     })
     .when('/marimo', {
+      controller:'IframeController',
       templateUrl:'html/marimo.html'
     })
     .when('/pubs', {
