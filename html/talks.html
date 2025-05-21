@@ -6,6 +6,23 @@ table, th, td {
 <h3>Tutorials and invited talks</h3>
 <ul class="list-group">
   <li class="list-group-item publist_row">
+      <span class="list-group-item-text" ng-click="showMoreMabtech2025 = !showMoreMabtech2025" >
+          <i class="material-icons">record_voice_over</i><i class="material-icons">duo</i><i class="material-icons">group_add</i>
+          Berend Bassleer, Tyler Sandberg and Pol del Aguila Pla, <strong>Multiplex made effortless, </strong> Mabtech Online Webinar, May 2025
+          <i id="morearrow" class="material-icons color-theme">
+              {{showMoreMabtech2025 ? 'arrow_downward' : 'arrow_forward'}}
+          </i> </a>
+      </span>
+      <div ng-show="showMoreMabtech2025">
+          <p style="text-align:justify"> <strong>Abstract:</strong> 
+         </br></br>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/XV2UEP6NNiw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div id="pubButtons">
+              <a class="label label-theme" href="data/talks/20250528_Tech_behind_Eyra.pdf">Slides</a>
+          </div>
+      </div>
+  </li>
+  <li class="list-group-item publist_row">
       <span class="list-group-item-text" ng-click="showMoreJung2021 = !showMoreJung2021" >
           <i class="material-icons">record_voice_over</i><i class="material-icons">duo</i><i class="material-icons">group_add</i>
           Pol del Aguila Pla, <strong>Remote and interactive image processing programming laboratories with Jupyter, </strong> Aalto University, Finland (Webinar), June 2021
